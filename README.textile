@@ -6,6 +6,10 @@ Best of all, there's a "detailed tutorial":https://github.com/fortuity/rails3-de
 
 You can clone this app or generate a new Rails application using this app as a template.
 
+h2. This is New, Please Try It and Give Feedback
+
+This is new as of April 22, 2011. Feedback from Rails developers is what makes the tutorial and example app useful. Even if you are already experienced with Devise, RSpec, and Cucumber, please "work through the tutorial":https://github.com/fortuity/rails3-devise-rspec-cucumber/wiki/Tutorial and offer your suggestions for improvements. You can edit the tutorial (it's just a wiki page) or create an "issue":http://github.com/fortuity/rails3-devise-rspec-cucumber/issues on GitHub.
+
 h2. Follow on Twitter
 
 To keep up to date with development of this app, follow me on Twitter:
