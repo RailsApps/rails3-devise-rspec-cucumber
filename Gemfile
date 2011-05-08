@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem 'rails', '3.0.6'
+gem 'rails', '3.0.7'
 gem 'sqlite3'
 gem "rspec-rails", ">= 2.5.0", :group => [:development, :test]
 gem "factory_girl_rails", ">= 1.1.beta1", :group => :test
