@@ -27,7 +27,7 @@ If you simply wish to modify the application for your own project, you can downl
 
 h2. What Is Implemented -- and What Is Not
 
-TThis is a demonstration application that allows you to visit a home page and see a list of users. With the default user's email and password (supplied below), you can log in and view details for each user. You can customize this app as you need.
+This is a demonstration application that allows you to visit a home page and see a list of users. With the default user's email and password (supplied below), you can log in and view details for each user. You can customize this app as you need.
 
 h4. Similar Examples and Tutorials
 
