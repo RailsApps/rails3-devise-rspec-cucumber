@@ -1,21 +1,19 @@
 h1. Rails3 + Devise + RSpec + Cucumber
 
-This is a detailed tutorial showing how to set up a Rails 3 project using  "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. Devise gives you ready-made authentication and user management. RSpec is a popular alternative to the Test::Unit testing framework. Cucumber is often used with RSpec for Behaviour Driven Development.
+This is an example Rails 3 application that shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. Devise gives you ready-made authentication and user management. RSpec is a popular alternative to the Test::Unit testing framework. Cucumber is often used with RSpec for Behaviour Driven Development.
 
 Best of all, there's a "detailed tutorial":https://github.com/fortuity/rails3-devise-rspec-cucumber/wiki/Tutorial (walk-through) to show how it's built.
 
 You can clone this app or generate a new Rails application using this app as a template.
 
-h2. This is New, Please Try It and Give Feedback
-
-This is new as of April 22, 2011. Feedback from Rails developers is what makes the tutorial and example app useful. Even if you are already experienced with Devise, RSpec, and Cucumber, please "work through the tutorial":https://github.com/fortuity/rails3-devise-rspec-cucumber/wiki/Tutorial and offer your suggestions for improvements. You can edit the tutorial (it's just a wiki page) or create an "issue":http://github.com/fortuity/rails3-devise-rspec-cucumber/issues on GitHub.
-
-h2. Follow on Twitter
-
-To keep up to date with development of this app, follow the project on Twitter:
-"http://twitter.com/rails_apps":http://twitter.com/rails_apps.
-
 Any issues? Please create an "Issue":http://github.com/fortuity/rails3-devise-rspec-cucumber/issues on GitHub.
+
+h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter
+
+To keep up to date, follow the project on Twitter:
+"http://twitter.com/rails_apps":http://twitter.com/rails_apps
+
+Please tweet some praise if you like what you've found.
 
 h2. "Building It" Tutorial
 
@@ -27,15 +25,20 @@ The tutorial documents each step to follow to create the application. Every step
 
 If you simply wish to modify the application for your own project, you can download the application and set it up as described below, without following the tutorial.
 
-h2. Similar Applications
+h2. What Is Implemented -- and What Is Not
+
+TThis is a demonstration application that allows you to visit a home page and see a list of users. With the default user's email and password (supplied below), you can log in and view details for each user. You can customize this app as you need.
+
+h4. Similar Examples and Tutorials
 
 If you'd like to use the Mongoid ORM with the MongoDB datastore instead of ActiveRecord and a SQLite database, see the "rails3-mongoid-devise":https://github.com/fortuity/rails3-mongoid-devise example app and tutorial. Mongoid makes development quicker without schemas or migrations. The "rails3-mongoid-devise":https://github.com/fortuity/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
 
-h2. What Is Implemented -- and What Is Not
-
-This is a barebones application that serves to demonstrate Devise working on Rails 3 with RSpec and Cucumber.
-
-All you can do is visit a home page and see a list of users. With the default user's email and password (supplied below), you can log in and view details for each user. You can customize this app as you need.
+|_. Author |_. Example App |_. Comments |
+| Plataformatec | "Devise":http://github.com/plataformatec/devise_example | Simple example using SQLite |
+| Daniel Kehoe | "OmniAuth, Mongoid":https://github.com/fortuity/rails3-mongoid-omniauth | Detailed tutorial, app template, starter app, using MongoDB |
+| Fernando Tapia Rico | "Devise, OmniAuth, Mongoid":https://github.com/fertapric/rails3-mongoid-devise-omniauth | With tutorial, using MongoDB |
+| Andi Altendorfer | "Community Base Application (CBA)":http://github.com/iboard/CBA | Devise, OmniAuth, Mongoid, CanCan, Paperclip, etc. |
+| Kristian Mandrup | "Cream":https://github.com/kristianmandrup/cream | Gem-based app generator for apps with Devise, many ORMs, CanCan |
 
 h2. Dependencies
 
@@ -101,13 +104,13 @@ h3. About Required Gems
 
 The application uses the following gems. I recommend checking for newer versions of these gems before proceeding:
 
-* rails "(check rubygems.org for the rails gem)":http://rubygems.org/gems/rails
-* devise "(Check rubygems.org for the devise gem)":http://rubygems.org/gems/devise
-* rspec-rails "(Check rubygems.org for the devise gem)":http://rubygems.org/gems/rspec-rails
-* database_cleaner "(Check rubygems.org for the devise gem)":http://rubygems.org/gems/database_cleaner
-* factory_girl_rails "(Check rubygems.org for the devise gem)":http://rubygems.org/gems/factory_girl_rails
-* cucumber-rails "(Check rubygems.org for the devise gem)":http://rubygems.org/gems/cucumber-rails
-* capybara "(Check rubygems.org for the devise gem)":http://rubygems.org/gems/capybara
+* rails "(check rubygems.org for a newer gem)":http://rubygems.org/gems/rails
+* devise "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/devise
+* rspec-rails "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/rspec-rails
+* database_cleaner "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/database_cleaner
+* factory_girl_rails "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/factory_girl_rails
+* cucumber-rails "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/cucumber-rails
+* capybara "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/capybara
 
 The app has been tested with the indicated versions. If you are able to build the app with a newer gem, please create an "issue":http://github.com/fortuity/rails3-devise-rspec-cucumber/issues on GitHub and I will update the app.
 
