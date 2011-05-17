@@ -88,7 +88,7 @@ The application generator template will ask you for your preferences:
 
 h4. Use "Recipes" to Customize an Application Template
 
-The "tutorial":https://github.com/railsapps/rails3-devise-rspec-cucumber/wiki/Tutorial shows how a customized application template can be assembled from "recipes." The application template was created using the "rails3_devise_wizard":https://github.com/fortuity/rails3_devise_wizard gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
+The "tutorial":https://github.com/railsapps/rails3-devise-rspec-cucumber/wiki/Tutorial shows how a customized application template can be assembled from "recipes." The application template was created using the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
 
 h4. Please Remember: Edit the README
 
