@@ -63,13 +63,11 @@ h4. Using the Ready-Made Application Template
 
 You can use an application template to generate a new version of the example app. You’ll find an application template for this app in the "RailsApps/rails3-application-templates":https://github.com/RailsApps/rails3-application-templates repository.
 
-For *Rails 3.1*, use the command:
+To build the "rails3-devise-rspec-cucumber" example application, run the command:
 
-@$ rails new APP_NAME -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-devise-rspec-cucumber-template.rb@
+@$ rails new APP_NAME -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-devise-rspec-cucumber-template.rb -T@
 
-For *Rails 3.0*, add the @-T -J@ flags to skip Test::Unit files and Prototype files:
-
-@$ rails new APP_NAME -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-devise-rspec-cucumber-template.rb -T -J@
+Use the @-T@ flag to skip Test::Unit files. Add the @-J@ flag to skip Prototype files for Rails 3.0 (not needed for Rails 3.1).
 
 bq. You MUST be using Rails 3.0.4 or newer. Generating a Rails application from an “HTTPS” URL does not work in Rails 3.0.3 and earlier versions.
 
