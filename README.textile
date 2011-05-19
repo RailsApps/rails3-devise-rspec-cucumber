@@ -177,69 +177,9 @@ To sign in as the default user, (unless you've changed it) use
 
 You should delete or change the pre-configured logins before you deploy your application.
 
-h2. Deploying to Heroku
+h2. Deploy to Heroku
 
-h3. Set Up Heroku
-
-For your convenience, here are instructions for deploying your app to Heroku. Heroku provides low cost, easily configured Rails application hosting.
-
-To deploy this app to Heroku, you must have a Heroku account. If you need to obtain one, visit "http://heroku.com/":http://heroku.com/ to set up an account. 
-
-Make sure the Heroku gem is in your *Gemfile* "(check rubygems.org for the latest heroku gem)":http://rubygems.org/gems/heroku:
-
-@gem "heroku"
-
-If it's not, add it and run
-
-@$ bundle install@
-
-to set up your gems again.
-
-Add your public key immediately after installing the heroku gem so that you can use git to push or clone Heroku app repositories. See "http://devcenter.heroku.com/articles/heroku-command":http://devcenter.heroku.com/articles/heroku-command for details.
-
-h3. Create Your Application on Heroku
-
-Use the Heroku create command to create and name your new app.
-
-@$ heroku create _myapp_@
-
-As of 9 February 2011, bamboo-ree-1.8.7 is the default stack for new Heroku apps.
-
-If you want to use Ruby 1.9.2, you can create your app with:
-
-@heroku create _myapp_ --stack bamboo-mri-1.9.2@
-
-h3. Check Heroku Configuration
-
-You can check that everything has been added correctly by running:
-
-@$ heroku info --app myapp@
-
-If you see @Stack: bamboo-ree-1.8.7@ and you want to use Ruby 1.9.2, you can migrate:
-
-@heroku stack:migrate bamboo-mri-1.9.2@
-
-h3. Push Your Application to Heroku
-
-Push your application to Heroku:
-
-@$ git push heroku master@
-
-Initialize your application database:
-
-@$ heroku rake db:seed@
-
-h3. Visit Your Site
-
-Open your Heroku site in your default web browser:
-
-@$ heroku open@
-
-h3. Troubleshooting
-
-If you get errors, you can troubleshoot by reviewing the log files:
-
-@$ heroku logs@
+For your convenience, here are "instructions for deploying your app to Heroku":http://railsapps.github.com/rails-heroku-tutorial.html. Heroku provides low cost, easily configured Rails application hosting.
 
 h2. Customizing
 
