@@ -77,8 +77,8 @@ This creates a new Rails app (with the @APP_NAME@ you provide) on your computer.
 
 The application generator template will ask you for your preferences:
 
-* Would you like to use jQuery?
-* Would you like to use jQuery UI?
+* Would you like to use jQuery instead of Prototype? (for Rails 3.0)
+* Would you like to use jQuery UI? (for Rails 3.0 or 3.1)
 * Would you like to use Haml instead of ERB?
 * Would you like to use RSpec instead of TestUnit?
 * Would you like to use factory_girl for test fixtures with RSpec?
