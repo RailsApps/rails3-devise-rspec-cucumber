@@ -30,7 +30,7 @@ This is a demonstration application that allows you to visit a home page and see
 
 h4. Similar Examples and Tutorials
 
-If you'd like to use the Mongoid ORM with the MongoDB datastore instead of ActiveRecord and a SQLite database, see the "rails3-mongoid-devise":https://github.com/fortuity/rails3-mongoid-devise example app and tutorial. Mongoid makes development quicker without schemas or migrations. The "rails3-mongoid-devise":https://github.com/fortuity/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
+If you'd like to use the Mongoid ORM with the MongoDB datastore instead of ActiveRecord and a SQLite database, see the "rails3-mongoid-devise":https://github.com/railsapps/rails3-mongoid-devise example app and tutorial. Mongoid makes development quicker without schemas or migrations. The "rails3-mongoid-devise":https://github.com/railsapps/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
 
 See a list of similar "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
 
@@ -198,8 +198,6 @@ After installing the application, run @rake -T@ to check that rake tasks for RSp
 Run @rake spec@ to run all RSpec tests.
 
 Run @rake cucumber@ (or more simply, @cucumber@) to run all Cucumber scenarios and steps.
-
-You can browse and search the Cucumber features at the "Relish":http://relishapp.com/fortuity/rails3-devise-rspec-cucumber website.
 
 h2. Documentation and Support
 
