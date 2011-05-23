@@ -1,6 +1,6 @@
 h1. Rails 3 + Devise + RSpec + Cucumber
 
-This is an example application for Rails 3.0 or Rails 3.1 that shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. Devise gives you ready-made authentication and user management. RSpec is a popular alternative to the Test::Unit testing framework. Cucumber is often used with RSpec for Behaviour Driven Development.
+This is an example application for Rails 3.1 that shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. Devise gives you ready-made authentication and user management. RSpec is a popular alternative to the Test::Unit testing framework. Cucumber is often used with RSpec for Behaviour Driven Development.
 
 Best of all, there's a "detailed tutorial":https://github.com/railsapps/rails3-devise-rspec-cucumber/wiki/Tutorial (walk-through) to show how it's built.
 
@@ -16,11 +16,11 @@ Follow the project on Twitter: "http://twitter.com/rails_apps":http://twitter.co
 
 h2. !http://railsapps.github.com/images/rails-36x36.jpg(Tutorial)! Tutorial
 
-A complete walkthrough tutorial for Rails 3.0 or Rails 3.1 is available on the GitHub wiki:
+A complete walkthrough tutorial for Rails 3.1 is available on the GitHub wiki:
 
 h4. "View the Tutorial":https://github.com/railsapps/rails3-devise-rspec-cucumber/wiki/Tutorial
 
-The tutorial documents each step to follow to create the application. Every step is documented concisely, so a complete beginner can create this application without any additional knowledge. However, no explanation is offered for any of the steps, so if you are a beginner, you’re advised to look for an introduction to Rails elsewhere. See a list of "Rails books and references":http://railsapps.github.com/rails-books.html for recommended reading.
+The tutorial documents each step to follow to create the application. Every step is documented concisely, so a complete beginner can create this application without any additional knowledge. However, no explanation is offered for any of the steps, so if you are a beginner, you’re advised to look for an introduction to Rails elsewhere. See a list of "recommended books and online resources for learning Rails":http://railsapps.github.com/best-recommended-learning-rails-books-resources.html.
 
 If you simply wish to modify the application for your own project, you can download the application and set it up as described below, without following the tutorial.
 
@@ -32,20 +32,22 @@ h4. Similar Examples and Tutorials
 
 If you'd like to use the Mongoid ORM with the MongoDB datastore instead of ActiveRecord and a SQLite database, see the "rails3-mongoid-devise":https://github.com/railsapps/rails3-mongoid-devise example app and tutorial. Mongoid makes development quicker without schemas or migrations. The "rails3-mongoid-devise":https://github.com/railsapps/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
 
-See a list of similar "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
+See an expanded list of more "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
 
 h2. Dependencies
 
 Before running this app, you need to install 
 
-* The Ruby language (version 1.8.7 or 1.9.2)
-* Rails 3.0 or Rails 3.1
+* The Ruby language (version 1.9.2)
+* Rails 3.1
 
-I recommend installing rvm, the "Ruby Version Manager":http://rvm.beginrescueend.com/, to manage multiple versions of Rails.
+If you must use an earlier version of Rails, this repository contains a branch for Rails 3.0.7.
 
 Check that appropriate versions of Ruby and Rails are installed in your development environment:
 @$ ruby -v@
 @$ rails -v@
+
+See "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for detailed instructions and advice.
 
 h2. Getting the Application
 
@@ -55,13 +57,13 @@ h4. Downloading the Code
 
 If you simply wish to examine the example code, you can download the code ("clone the repository") with the command
 
-@$ git clone git://github.com/railsapps/rails3-devise-rspec-cucumber.git@
+@$ git clone git://github.com/RailsApps/rails3-devise-rspec-cucumber.git@
 
 The source code is managed with Git (a version control system). You'll need Git on your machine (install it from "http://git-scm.com/":http://git-scm.com/).
 
 h4. Using the Ready-Made Application Template
 
-You can use an application template to generate a new version of the example app. You’ll find an application template for this app in the "RailsApps/rails3-application-templates":https://github.com/RailsApps/rails3-application-templates repository.
+You can use an application template to generate a new version of the example app. You’ll find an application template for this app in the "Rails Application Templates":https://github.com/RailsApps/rails3-application-templates repository.
 
 To build the "rails3-devise-rspec-cucumber" example application, run the command:
 
@@ -86,7 +88,7 @@ The application generator template will ask you for your preferences:
 
 h4. Use "Recipes" to Customize an Application Template
 
-The "tutorial":https://github.com/railsapps/rails3-devise-rspec-cucumber/wiki/Tutorial shows how a customized application template can be assembled from "recipes." The application template was created using the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
+The "tutorial":https://github.com/railsapps/rails3-devise-rspec-cucumber/wiki/Tutorial shows how a customized application template can be assembled from "recipes." The application template was created using the "Rails Apps Composer":https://github.com/RailsApps/rails_apps_composer gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
 
 h4. Please Remember: Edit the README
 
@@ -96,17 +98,19 @@ h2. Getting Started
 
 h3. About Required Gems
 
-The application uses the following gems. I recommend checking for newer versions of these gems before proceeding:
+The application uses the following gems:
 
-* rails "(check rubygems.org for a newer gem)":http://rubygems.org/gems/rails
-* devise "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/devise
-* rspec-rails "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/rspec-rails
-* database_cleaner "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/database_cleaner
-* factory_girl_rails "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/factory_girl_rails
-* cucumber-rails "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/cucumber-rails
-* capybara "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/capybara
+* rails
+* rspec-rails
+* database_cleaner
+* factory_girl_rails
+* cucumber-rails
+* capybara
+* devise
 
-The app has been tested with the indicated versions. If you are able to build the app with a newer gem, please create an "issue":http://github.com/railsapps/rails3-devise-rspec-cucumber/issues on GitHub and I will update the app.
+See an example "Rails 3.1 Gemfile":http://railsapps.github.com/rails-3-1-example-gemfile.html.
+
+See "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for advice and details.
 
 h3. Install the Required Gems
 
@@ -122,7 +126,7 @@ Keep in mind that you have installed these gems locally. When you deploy the app
 
 h3. Set Up Configuration for Devise
 
-This app uses Devise for user management and authentication. Devise is at "http://github.com/plataformatec/devise":http://github.com/plataformatec/devise.
+This app uses "Devise":http://github.com/plataformatec/devise for user management and authentication.
 
 You can modify the configuration file for Devise if you want to use something other than the defaults:
 
@@ -179,7 +183,7 @@ You should delete or change the pre-configured logins before you deploy your app
 
 h2. Deploy to Heroku
 
-For your convenience, here are "instructions for deploying your app to Heroku":http://railsapps.github.com/rails-heroku-tutorial.html. Heroku provides low cost, easily configured Rails application hosting.
+For your convenience, here are instructions for "deploying your app to Heroku":http://railsapps.github.com/rails-heroku-tutorial.html. Heroku provides low cost, easily configured Rails application hosting.
 
 h2. Customizing
 
