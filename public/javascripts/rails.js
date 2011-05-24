@@ -112,8 +112,8 @@
         } else {
           method = element.data('method');
           url = element.attr('href');
-          data = null;
-        }
+          data = element.data('params') || null; 
+       }
 
         rails.ajax({
           url: url, type: method || 'GET', data: data, dataType: dataType,
@@ -181,13 +181,16 @@
       });
     },
 
-    /* If message provided in 'data-confirm' attribute:
-      - fires `confirm` event
-      - shows the confirm dialog
-      - fires the `confirmed` event
-     and returns true if no function stopped the chain and user chose yes; false otherwise.
-     Attaching a handler to the element's `confirm` event that returns false cancels the confirm dialog.
-    */
+   /* For 'data-confirm' attribute:
+      - Fires `confirm` event
+      - Shows the confirmation dialog
+      - Fires the `confirm:complete` event
+
+      Returns `true` if no function stops the chain and user chose yes; `false` otherwise.
+      Attaching a handler to the element's `confirm` event that returns a `falsy` value cancels the confirmation dialog.
+      Attaching a handler to the element's `confirm:complete` event that returns a `falsy` value makes this function
+      return false. The `confirm:complete` event is fired whether or not the user answered true or false to the dialog.
+   */
     allowAction: function(element) {
       var message = element.data('confirm'),
           answer = false, callback;
@@ -221,6 +224,7 @@
 
     // Helper function, needed to provide consistent behavior in IE
     stopEverything: function(e) {
+      $(e.target).trigger('ujs:everythingStopped');
       e.stopImmediatePropagation();
       return false;
     },
@@ -268,7 +272,7 @@
 
     // skip other logic when required values are missing or file upload is present
     if (blankRequiredInputs && rails.fire(form, 'ajax:aborted:required', [blankRequiredInputs])) {
-      return !remote;
+      return rails.stopEverything(e);
     }
 
     if (remote) {
