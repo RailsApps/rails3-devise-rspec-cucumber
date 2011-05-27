@@ -10,7 +10,7 @@ Any issues? Please create a "GitHub issue":http://github.com/railsapps/rails3-de
 
 h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter !http://railsapps.github.com/images/mailing-list-icon.jpg(Join the Mailing List)!:http://eepurl.com/dQx3o Join the Mailing List
 
-Follow the project on Twitter: "http://twitter.com/rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
+Follow the project on Twitter: "rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
 
 <a href="http://eepurl.com/dQx3o">Join the email list</a> (low volume, announcements only) for project updates and my tips about Rails resources.
 
@@ -41,11 +41,7 @@ Before running this app, you need to install
 * The Ruby language (version 1.9.2)
 * Rails 3.1
 
-If you must use an earlier version of Rails, this repository contains a branch for Rails 3.0.7.
-
-Check that appropriate versions of Ruby and Rails are installed in your development environment:
-@$ ruby -v@
-@$ rails -v@
+This repository also contains branches for earlier version of Rails.
 
 See "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for detailed instructions and advice.
 
@@ -96,7 +92,7 @@ If you're open sourcing the app on GitHub, please edit the README file to add a 
 
 h2. Getting Started
 
-h3. About Required Gems
+h4. About Required Gems
 
 The application uses the following gems:
 
@@ -112,7 +108,7 @@ See an example "Rails 3.1 Gemfile":http://railsapps.github.com/rails-3-1-example
 
 See "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for advice and details.
 
-h3. Install the Required Gems
+h4. Install the Required Gems
 
 Install the required gems on your computer:
 
@@ -124,7 +120,7 @@ You can check which gems are installed on your computer with:
 
 Keep in mind that you have installed these gems locally. When you deploy the app to another server, the same gems (and versions) must be available.
 
-h3. Set Up Configuration for Devise
+h4. Set Up Configuration for Devise
 
 This app uses "Devise":http://github.com/plataformatec/devise for user management and authentication.
 
@@ -132,7 +128,7 @@ You can modify the configuration file for Devise if you want to use something ot
 
 *config/initializers/devise.rb*
 
-h3. Configure Email for Devise
+h4. Configure Email for Devise
 
 Configure email by modifying
 
@@ -147,7 +143,7 @@ You may need to set values for your mailhost in
 
 h2. Create a Default User
 
-h3. Set Up a Database Seed File
+h4. Set Up a Database Seed File
 
 You'll want to set up a default user so you can easily log in to test the app. You can modify the file *db/seeds.rb* for your own name, email and password:
 
@@ -159,14 +155,14 @@ puts 'New user created: ' << user.name
 
 Use the defaults or change the values for name, email, and password as you wish.
 
-h3. Seed the Database
+h4. Seed the Database
 
 Add the default user to the database by running the command:
 
 @$ rake db:migrate@
 @$ rake db:seed@
 
-h3. Test the App
+h4. Test the App
 
 You can check that your app runs properly by entering the command
 
@@ -231,7 +227,7 @@ and tweet some praise. I'd love to know you were helped out by what I've put tog
 
 h2. License
 
-h3. Public Domain Dedication
+h4. Public Domain Dedication
 
 This work is a compilation and derivation from other previously released works. With the exception of various included works, which may be restricted by other licenses, the author or authors of this code dedicate any and all copyright interest in this code to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this code under copyright law.
 
