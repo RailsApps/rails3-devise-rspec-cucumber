@@ -2,15 +2,15 @@ h1. Rails 3 + Devise + RSpec + Cucumber
 
 This is an example application for Rails 3.1 that shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. Devise gives you ready-made authentication and user management. RSpec is a popular alternative to the Test::Unit testing framework. Cucumber is often used with RSpec for Behaviour Driven Development.
 
-Best of all, there's a "detailed tutorial":https://github.com/railsapps/rails3-devise-rspec-cucumber/wiki/Tutorial (walk-through) to show how it's built.
+Best of all, there's a "detailed tutorial":https://github.com/RailsApps/rails3-devise-rspec-cucumber/wiki/Tutorial (walk-through) to show how it's built.
 
 You can clone this app or generate a new Rails application using this app as a template.
 
-Any issues? Please create a "GitHub issue":http://github.com/railsapps/rails3-devise-rspec-cucumber/issues.
+Any issues? Please create a "GitHub issue":http://github.com/RailsApps/rails3-devise-rspec-cucumber/issues.
 
 h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter !http://railsapps.github.com/images/mailing-list-icon.jpg(Join the Mailing List)!:http://eepurl.com/dQx3o Join the Mailing List
 
-Follow the project on Twitter: "rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
+Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
 
 <a href="http://eepurl.com/dQx3o">Join the email list</a> (low volume, announcements only) for project updates and my tips about Rails resources.
 
@@ -18,7 +18,7 @@ h2. !http://railsapps.github.com/images/rails-36x36.jpg(Tutorial)! Tutorial
 
 A complete walkthrough tutorial for Rails 3.1 is available on the GitHub wiki:
 
-h4. "View the Tutorial":https://github.com/railsapps/rails3-devise-rspec-cucumber/wiki/Tutorial
+h4. "View the Tutorial":https://github.com/RailsApps/rails3-devise-rspec-cucumber/wiki/Tutorial
 
 The tutorial documents each step to follow to create the application. Every step is documented concisely, so a complete beginner can create this application without any additional knowledge. However, no explanation is offered for any of the steps, so if you are a beginner, you’re advised to look for an introduction to Rails elsewhere. See a list of "recommended books and online resources for learning Rails":http://railsapps.github.com/best-recommended-learning-rails-books-resources.html.
 
@@ -30,20 +30,24 @@ This is a demonstration application that allows you to visit a home page and see
 
 h4. Similar Examples and Tutorials
 
-If you'd like to use the Mongoid ORM with the MongoDB datastore instead of ActiveRecord and a SQLite database, see the "rails3-mongoid-devise":https://github.com/railsapps/rails3-mongoid-devise example app and tutorial. Mongoid makes development quicker without schemas or migrations. The "rails3-mongoid-devise":https://github.com/railsapps/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
+If you'd like to use the Mongoid ORM with the MongoDB datastore instead of ActiveRecord and a SQLite database, see the "rails3-mongoid-devise":https://github.com/RailsApps/rails3-mongoid-devise example app and tutorial. Mongoid makes development quicker without schemas or migrations. The "rails3-mongoid-devise":https://github.com/RailsApps/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
 
 See an expanded list of more "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
 
 h2. Dependencies
 
-Before running this app, you need to install 
+Before generating your application, you will need:
 
 * The Ruby language (version 1.9.2)
+** @$ ruby -v@
 * Rails 3.1
+** @$ rails -v@
+* Rake 0.9.0
+** @$ rake --version@
 
-This repository also contains branches for earlier version of Rails.
+You must update the standard Ruby installation from Rake 0.8.7 to Rake 0.9.0 before using the application templates to generate a new Rails app.
 
-See "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for detailed instructions and advice.
+See "Installing Rails 3.1":http://railsapps.github.com/installing-rails-3-1.html and "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for detailed instructions and advice.
 
 h2. Getting the Application
 
@@ -84,7 +88,7 @@ The application generator template will ask you for your preferences:
 
 h4. Use "Recipes" to Customize an Application Template
 
-The "tutorial":https://github.com/railsapps/rails3-devise-rspec-cucumber/wiki/Tutorial shows how a customized application template can be assembled from "recipes." The application template was created using the "Rails Apps Composer":https://github.com/RailsApps/rails_apps_composer gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
+The "tutorial":https://github.com/RailsApps/rails3-devise-rspec-cucumber/wiki/Tutorial shows how a customized application template can be assembled from "recipes." The application template was created using the "Rails Apps Composer":https://github.com/RailsApps/rails_apps_composer gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
 
 h4. Please Remember: Edit the README
 
@@ -96,13 +100,13 @@ h4. About Required Gems
 
 The application uses the following gems:
 
-* rails
-* rspec-rails
-* database_cleaner
-* factory_girl_rails
-* cucumber-rails
-* capybara
-* devise
+* "rails":http://rubygems.org/gems/rails
+* "rspec-rails":http://rubygems.org/gems/rspec-rails
+* "database_cleaner":http://rubygems.org/gems/database_cleaner
+* "factory_girl_rails":http://rubygems.org/gems/factory_girl_rails
+* "cucumber-rails":http://rubygems.org/gems/cucumber-rails
+* "capybara":http://rubygems.org/gems/capybara
+* "devise":http://rubygems.org/gems/devise
 
 See an example "Rails 3.1 Gemfile":http://railsapps.github.com/rails-3-1-example-gemfile.html.
 
@@ -207,13 +211,13 @@ For a Devise introduction, Ryan Bates offers a "Railscast on Devise":http://rail
 
 h4. Issues
 
-Please create a "GitHub issue":http://github.com/railsapps/rails3-devise-rspec-cucumber/issues if you identify any problems or have suggestions for improvements.
+Please create a "GitHub issue":http://github.com/RailsApps/rails3-devise-rspec-cucumber/issues if you identify any problems or have suggestions for improvements.
 
 h2. Contributing
 
 If you make improvements to this application, please share with others.
 
-Send the author a message, create an "issue":http://github.com/railsapps/rails3-devise-rspec-cucumber/issues, or fork the project and submit a pull request.
+Send the author a message, create an "issue":http://github.com/RailsApps/rails3-devise-rspec-cucumber/issues, or fork the project and submit a pull request.
 
 If you add functionality to this application, create an alternative implementation, or build an application that is similar, please contact me and I'll add a note to the README so that others can find your work.
 
@@ -221,8 +225,7 @@ h2. Credits
 
 Daniel Kehoe ("http://danielkehoe.com/":http://danielkehoe.com/) implemented the application and wrote the tutorial.
 
-Is the app useful to you? Follow the project on Twitter:
-"rails_apps":http://twitter.com/rails_apps
+Is the app useful to you? Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps
 and tweet some praise. I'd love to know you were helped out by what I've put together.
 
 h2. License
