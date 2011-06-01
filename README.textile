@@ -42,10 +42,10 @@ Before generating your application, you will need:
 ** @$ ruby -v@
 * Rails 3.1
 ** @$ rails -v@
-* Rake 0.9.0
+* Rake 0.9.1
 ** @$ rake --version@
 
-You must update the standard Ruby installation from Rake 0.8.7 to Rake 0.9.0 before using the application templates to generate a new Rails app.
+You must update the standard Ruby installation from Rake 0.8.7 to Rake 0.9.1 before using the application templates to generate a new Rails app.
 
 See "Installing Rails 3.1":http://railsapps.github.com/installing-rails-3-1.html and "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for detailed instructions and advice.
 
