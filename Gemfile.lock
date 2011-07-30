@@ -176,9 +176,9 @@ DEPENDENCIES
   cucumber-rails (>= 1.0.2)
   database_cleaner (>= 0.6.7)
   devise (>= 1.4.2)
-  factory_girl_rails (>= 1.1.rc1)
+  factory_girl_rails (>= 1.1.0)
   jquery-rails
-  launchy (>= 0.4.0)
+  launchy (>= 2.0.5)
   rails (= 3.1.0.rc5)
   rspec-rails (>= 2.6.1)
   sass-rails (~> 3.1.0.rc)
