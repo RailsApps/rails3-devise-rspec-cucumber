@@ -14,3 +14,4 @@ gem "capybara", ">= 1.0.0", :group => :test
 gem "database_cleaner", ">= 0.6.7", :group => :test
 gem "launchy", ">= 2.0.5", :group => :test
 gem "devise", ">= 1.4.2"
+gem "therubyracer", "0.9.4" # default javascript runtime for execjs 
