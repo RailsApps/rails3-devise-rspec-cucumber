@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
-gem 'rails', '3.1.0.rc6'
+gem 'rails', '3.1.0'
 gem 'sqlite3'
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0.rc"
-  gem 'coffee-rails', "~> 3.1.0.rc"
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
 gem 'jquery-rails'
@@ -13,4 +13,4 @@ gem "cucumber-rails", ">= 1.0.2", :group => :test
 gem "capybara", ">= 1.0.1", :group => :test
 gem "database_cleaner", ">= 0.6.7", :group => :test
 gem "launchy", ">= 2.0.5", :group => :test
-gem "devise", ">= 1.4.2"
+gem "devise", ">= 1.4.4"
