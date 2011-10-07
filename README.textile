@@ -42,10 +42,10 @@ Before generating your application, you will need:
 ** @$ ruby -v@
 * Rails 3.1.1
 ** @$ rails -v@
-* Rake 0.9.1
+* Rake 0.9.2
 ** @$ rake --version@
 
-You must update the standard Ruby installation from Rake 0.8.7 to Rake 0.9.1 before using the application templates to generate a new Rails app.
+You must update the standard Ruby installation from Rake 0.8.7 to Rake 0.9.2 before using the application templates to generate a new Rails app.
 
 See "Installing Rails 3.1":http://railsapps.github.com/installing-rails-3-1.html and "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for detailed instructions and advice.
 
@@ -73,18 +73,25 @@ Use the @-T@ flag to skip Test::Unit files. Add the @-J@ flag to skip Prototype 
 
 bq. You MUST be using Rails 3.0.4 or newer. Generating a Rails application from an “HTTPS” URL does not work in Rails 3.0.3 and earlier versions.
 
-This creates a new Rails app (with the @myapp@ you provide) on your computer.
+This creates a new Rails app (with the name @myapp@) on your computer.
 
 The application generator template will ask you for your preferences:
 
-* Would you like to use jQuery instead of Prototype? (for Rails 3.0)
-* Would you like to use jQuery UI? (for Rails 3.0 or 3.1)
+* Would you like to use jQuery?
+* Would you like to use jQuery UI?
 * Would you like to use Haml instead of ERB?
 * Would you like to use RSpec instead of TestUnit?
 * Would you like to use factory_girl for test fixtures with RSpec?
 * Would you like to use Cucumber for your BDD?
+* Would you like to use Guard to automate your workflow?
+* Would you like to use Mongoid to connect to a MongoDB database?
 * Would you like to use Devise for authentication?
+* Would you like to install HTML5 Boilerplate?
+* Normalize CSS and use Skeleton boilerplate?
+* Normalize CSS for consistent styling across browsers?
+* Completely reset all CSS to eliminate styling?
 * Would you like to set a robots.txt file to ban spiders?
+* Would you like to use ‘rails-footnotes’ during development?
 
 h4. Use "Recipes" to Customize an Application Template
 
