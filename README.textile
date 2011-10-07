@@ -1,6 +1,6 @@
-h1. Rails 3 + Devise + RSpec + Cucumber
+h1. Rails 3.1 + Devise + RSpec + Cucumber
 
-This is an example application for Rails 3.1 that shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. Devise gives you ready-made authentication and user management. RSpec is a popular alternative to the Test::Unit testing framework. Cucumber is often used with RSpec for Behaviour Driven Development.
+This is an example application for Rails 3.1.1 that shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. Devise gives you ready-made authentication and user management. RSpec is a popular alternative to the Test::Unit testing framework. Cucumber is often used with RSpec for Behaviour Driven Development.
 
 Best of all, there's a "detailed tutorial":https://github.com/RailsApps/rails3-devise-rspec-cucumber/wiki/Tutorial (walk-through) to show how it's built.
 
@@ -16,7 +16,7 @@ Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps. Plea
 
 h2. !http://railsapps.github.com/images/rails-36x36.jpg(Tutorial)! Tutorial
 
-A complete walkthrough tutorial for Rails 3.1 is available on the GitHub wiki:
+A complete walkthrough tutorial for Rails 3.1.1 is available on the GitHub wiki:
 
 h4. "View the Tutorial":https://github.com/RailsApps/rails3-devise-rspec-cucumber/wiki/Tutorial
 
@@ -40,7 +40,7 @@ Before generating your application, you will need:
 
 * The Ruby language (version 1.9.2)
 ** @$ ruby -v@
-* Rails 3.1
+* Rails 3.1.1
 ** @$ rails -v@
 * Rake 0.9.1
 ** @$ rake --version@
@@ -67,13 +67,13 @@ You can use an application template to generate a new version of the example app
 
 To build the "rails3-devise-rspec-cucumber" example application, run the command:
 
-@$ rails new APP_NAME -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-devise-rspec-cucumber-template.rb -T@
+@$ rails new myapp -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-devise-rspec-cucumber-template.rb -T@
 
 Use the @-T@ flag to skip Test::Unit files. Add the @-J@ flag to skip Prototype files for Rails 3.0 (not needed for Rails 3.1).
 
 bq. You MUST be using Rails 3.0.4 or newer. Generating a Rails application from an “HTTPS” URL does not work in Rails 3.0.3 and earlier versions.
 
-This creates a new Rails app (with the @APP_NAME@ you provide) on your computer.
+This creates a new Rails app (with the @myapp@ you provide) on your computer.
 
 The application generator template will ask you for your preferences:
 
@@ -108,7 +108,7 @@ The application uses the following gems:
 * "capybara":http://rubygems.org/gems/capybara
 * "devise":http://rubygems.org/gems/devise
 
-See an example "Rails 3.1 Gemfile":http://railsapps.github.com/rails-3-1-example-gemfile.html.
+See an example "Rails 3.1.1 Gemfile":http://railsapps.github.com/rails-3-1-1-example-gemfile.html.
 
 See "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for advice and details.
 
