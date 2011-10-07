@@ -84,7 +84,6 @@ The application generator template will ask you for your preferences:
 * Would you like to use factory_girl for test fixtures with RSpec?
 * Would you like to use Cucumber for your BDD?
 * Would you like to use Guard to automate your workflow?
-* Would you like to use Mongoid to connect to a MongoDB database?
 * Would you like to use Devise for authentication?
 * Would you like to install HTML5 Boilerplate?
 * Normalize CSS and use Skeleton boilerplate?
@@ -160,7 +159,7 @@ You'll want to set up a default user so you can easily log in to test the app. Y
 
 <pre>
 puts 'SETTING UP DEFAULT USER LOGIN'
-user = User.create! :name => 'First User', :email => 'user@test.com', :password => 'please', :password_confirmation => 'please'
+user = User.create! :name => 'First User', :email => 'user@example.com', :password => 'please', :password_confirmation => 'please'
 puts 'New user created: ' << user.name
 </pre>
 
@@ -183,7 +182,7 @@ To see your application in action, open a browser window and navigate to "http:/
 
 To sign in as the default user, (unless you've changed it) use
 
-* email: user@test.com
+* email: user@example.com
 * password: please
 
 You should delete or change the pre-configured logins before you deploy your application.
