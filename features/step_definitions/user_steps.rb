@@ -24,10 +24,6 @@ Given /^I am signed up as "(.*)\/(.*)"$/ do |email, password|
   And %{I am logout}
 end
 
-Then /^I sign out$/ do
-  visit('/users/sign_out')
-end
-
 Given /^I am logout$/ do
   Given %{I sign out}
 end
@@ -56,6 +52,10 @@ Then /^I should be signed out$/ do
   And %{I should see "Sign up"}
   And %{I should see "Login"}
   And %{I should not see "Logout"}
+end
+
+Then /^I sign out$/ do
+  visit '/users/sign_out'
 end
 
 When /^I go to the sign in page$/ do
