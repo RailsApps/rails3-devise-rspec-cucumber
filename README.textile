@@ -234,6 +234,10 @@ Daniel Kehoe ("http://danielkehoe.com/":http://danielkehoe.com/) implemented the
 Is the app useful to you? Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps
 and tweet some praise. I'd love to know you were helped out by what I've put together.
 
+h4. Contributors
+
+"Rowan":https://github.com/rowanu implemented Cucumber steps.
+
 h2. License
 
 h4. Public Domain Dedication
