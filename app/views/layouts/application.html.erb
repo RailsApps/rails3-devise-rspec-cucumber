@@ -1,20 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Rails3DeviseRspecCucumber</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <ul class="hmenu">
-    <%= render 'shared/navigation' %>
-  </ul>
-  <%- flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-  <%- end -%>
-
-<%= yield %>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myapp</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="<%= params[:controller] %>">
+    <div id="container" class="container">
+      <header>
+        <nav>
+          <ul class="hmenu">
+            <%= render 'shared/navigation' %>
+          </ul>
+        </nav>
+        <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :id => "flash_\#{name}" if msg.is_a?(String) %>
+        <%- end -%>
+      </header>
+      <div id="main" role="main">
+        <%= yield %>
+      </div>
+      <footer>
+      </footer>
+    </div> <!--! end of #container -->
+  </body>
 </html>

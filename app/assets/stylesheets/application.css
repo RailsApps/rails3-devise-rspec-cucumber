@@ -5,12 +5,12 @@
  *= require_self
  *= require_tree . 
 */
-ul.hmenu {
+header nav ul {
   list-style: none;
   margin: 0 0 2em;
   padding: 0;
 }
-ul.hmenu li {
+header nav ul li {
   display: inline;
 }
 #flash_notice, #flash_alert {
