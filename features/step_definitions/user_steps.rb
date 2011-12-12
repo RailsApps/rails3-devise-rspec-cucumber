@@ -55,14 +55,6 @@ Then /^I go to the home page$/ do
   visit '/'
 end
 
-Given /^I am on the home page$/ do
-  visit '/'
-end
-
-Given /^I go to the sign up page$/ do
-  visit '/users/sign_up'
-end
-
 When /^I press "([^"]*)"$/ do |label|
   click_button label
 end
