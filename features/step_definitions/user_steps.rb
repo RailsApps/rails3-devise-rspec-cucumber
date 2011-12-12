@@ -137,3 +137,17 @@ end
 Then /^I should see a mismatched password message$/ do
   page.should have_content "Password doesn't match confirmation"
 end
+
+Given /^I am logged in$/ do
+  user = { :name => "Testy McUserton", :email => "testy@userton.com",
+    :password => "please", :password_confirmation => "please"}
+  sign_up user
+end
+
+Then /^I should see a signed out message$/ do
+  page.should have_content "Signed out"
+end
+
+When /^I return to the site$/ do
+  visit '/'
+end
