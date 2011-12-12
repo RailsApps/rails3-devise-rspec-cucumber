@@ -1,16 +1,5 @@
-Given /^I am a user named "([^"]*)" with an email "([^"]*)" and password "([^"]*)"$/ do |name, email, password|
-  User.new(:name => name,
-            :email => email,
-            :password => password,
-            :password_confirmation => password).save!
-end
-
 Given /^I am not logged in$/ do
   visit '/users/sign_out'
-end
-
-When /^I go to the homepage$/ do
-  visit '/'
 end
 
 Then /^I should be signed in$/ do
@@ -27,10 +16,6 @@ end
 
 Then /^I sign out$/ do
   visit '/users/sign_out'
-end
-
-Then /^I should see "([^"]*)"$/ do |text|
-  page.should have_content(text)
 end
 
 def valid_user
