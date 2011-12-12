@@ -86,15 +86,19 @@ When /^I follow "([^"]*)"$/ do |text|
   click_link text
 end
 
-When /^I sign up with valid user data$/ do
-  user = { :name => "Testy McUserton", :email => "testy@userton.com",
-    :password => "please" }
+def sign_up user
   visit '/users/sign_up'
   fill_in "Name", :with => user[:name]
   fill_in "Email", :with => user[:email]
   fill_in "Password", :with => user[:password]
-  fill_in "Password confirmation", :with => user[:password]
+  fill_in "Password confirmation", :with => user[:password_confirmation]
   click_button "Sign up"
+end
+
+When /^I sign up with valid user data$/ do
+  user = { :name => "Testy McUserton", :email => "testy@userton.com",
+    :password => "please", :password_confirmation => "please"}
+  sign_up user
 end
 
 Then /^I should see a succesfull sign up message$/ do
@@ -103,13 +107,8 @@ end
 
 When /^I sign up with an invalid email$/ do
   user = { :name => "Testy McUserton", :email => "notanemail",
-    :password => "please" }
-  visit '/users/sign_up'
-  fill_in "Name", :with => user[:name]
-  fill_in "Email", :with => user[:email]
-  fill_in "Password", :with => user[:password]
-  fill_in "Password confirmation", :with => user[:password]
-  click_button "Sign up"
+    :password => "please", :password_confirmation => "please"}
+  sign_up user
 end
 
 Then /^I should see an invalid email message$/ do
@@ -119,12 +118,7 @@ end
 When /^I sign up without a password$/ do
   user = { :name => "Testy McUserton", :email => "notanemail",
     :password => "", :password_confirmation => "please" }
-  visit '/users/sign_up'
-  fill_in "Name", :with => user[:name]
-  fill_in "Email", :with => user[:email]
-  fill_in "Password", :with => user[:password]
-  fill_in "Password confirmation", :with => user[:password_confirmation]
-  click_button "Sign up"
+  sign_up user
 end
 
 Then /^I should see a missing password message$/ do
@@ -134,12 +128,7 @@ end
 When /^I sign up without a confirmed password$/ do
   user = { :name => "Testy McUserton", :email => "notanemail",
     :password => "please", :password_confirmation => "" }
-  visit '/users/sign_up'
-  fill_in "Name", :with => user[:name]
-  fill_in "Email", :with => user[:email]
-  fill_in "Password", :with => user[:password]
-  fill_in "Password confirmation", :with => user[:password_confirmation]
-  click_button "Sign up"
+  sign_up user
 end
 
 Then /^I should see a missing password confirmation message$/ do
@@ -149,12 +138,7 @@ end
 When /^I sign up with a mismatched password confirmation$/ do
   user = { :name => "Testy McUserton", :email => "notanemail",
     :password => "please", :password_confirmation => "please123" }
-  visit '/users/sign_up'
-  fill_in "Name", :with => user[:name]
-  fill_in "Email", :with => user[:email]
-  fill_in "Password", :with => user[:password]
-  fill_in "Password confirmation", :with => user[:password_confirmation]
-  click_button "Sign up"
+  sign_up user
 end
 
 Then /^I should see a mismatched password message$/ do
