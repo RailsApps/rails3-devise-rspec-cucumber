@@ -9,10 +9,6 @@ Given /^I am a user named "([^"]*)" with an email "([^"]*)" and password "([^"]*
             :password_confirmation => password).save!
 end
 
-Then /^I should be already signed in$/ do
-  page.should have_content "Logout"
-end
-
 Given /^I am not logged in$/ do
   visit '/users/sign_out'
 end
@@ -25,14 +21,14 @@ When /^I sign in as "(.*)\/(.*)"$/ do |email, password|
   click_button "Sign in"
 end
 
+When /^I go to the homepage$/ do
+  visit '/'
+end
+
 Then /^I should be signed in$/ do
   page.should have_content "Logout"
   page.should_not have_content "Sign up"
   page.should_not have_content "Login"
-end
-
-When /^I return next time$/ do
-  visit '/'
 end
 
 Then /^I should be signed out$/ do
@@ -45,16 +41,8 @@ Then /^I sign out$/ do
   visit '/users/sign_out'
 end
 
-When /^I go to the sign in page$/ do
-  visit '/users/sign_in'
-end
-
 Then /^I should see "([^"]*)"$/ do |text|
   page.should have_content(text)
-end
-
-Then /^I go to the home page$/ do
-  visit '/'
 end
 
 When /^I press "([^"]*)"$/ do |label|
@@ -65,12 +53,13 @@ When /^I fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   fill_in(field, :with => value)
 end
 
-When /^I go to the homepage$/ do
-  visit '/'
-end
-
 When /^I follow "([^"]*)"$/ do |text|
   click_link text
+end
+
+def valid_user
+  @user ||= { :name => "Testy McUserton", :email => "testy@userton.com",
+    :password => "please", :password_confirmation => "please"}
 end
 
 def sign_up user
@@ -83,9 +72,7 @@ def sign_up user
 end
 
 When /^I sign up with valid user data$/ do
-  user = { :name => "Testy McUserton", :email => "testy@userton.com",
-    :password => "please", :password_confirmation => "please"}
-  sign_up user
+  sign_up valid_user
 end
 
 Then /^I should see a succesfull sign up message$/ do
@@ -93,8 +80,7 @@ Then /^I should see a succesfull sign up message$/ do
 end
 
 When /^I sign up with an invalid email$/ do
-  user = { :name => "Testy McUserton", :email => "notanemail",
-    :password => "please", :password_confirmation => "please"}
+  user = valid_user.merge(:email => "notanemail")
   sign_up user
 end
 
@@ -103,8 +89,7 @@ Then /^I should see an invalid email message$/ do
 end
 
 When /^I sign up without a password$/ do
-  user = { :name => "Testy McUserton", :email => "notanemail",
-    :password => "", :password_confirmation => "please" }
+  user = valid_user.merge(:password => "")
   sign_up user
 end
 
@@ -113,8 +98,7 @@ Then /^I should see a missing password message$/ do
 end
 
 When /^I sign up without a confirmed password$/ do
-  user = { :name => "Testy McUserton", :email => "notanemail",
-    :password => "please", :password_confirmation => "" }
+  user = valid_user.merge(:password_confirmation => "")
   sign_up user
 end
 
@@ -123,8 +107,7 @@ Then /^I should see a missing password confirmation message$/ do
 end
 
 When /^I sign up with a mismatched password confirmation$/ do
-  user = { :name => "Testy McUserton", :email => "notanemail",
-    :password => "please", :password_confirmation => "please123" }
+  user = valid_user.merge(:password_confirmation => "please123")
   sign_up user
 end
 
@@ -133,9 +116,7 @@ Then /^I should see a mismatched password message$/ do
 end
 
 Given /^I am logged in$/ do
-  user = { :name => "Testy McUserton", :email => "testy@userton.com",
-    :password => "please", :password_confirmation => "please"}
-  sign_up user
+  sign_up valid_user
 end
 
 Then /^I should see a signed out message$/ do
@@ -147,22 +128,18 @@ When /^I return to the site$/ do
 end
 
 Given /^I exist as a user$/ do
-  @user = { :name => "Testy McUserton", :email => "testy@userton.com",
-    :password => "please", :password_confirmation => "please"}
-  sign_up @user
+  sign_up valid_user
   visit '/users/sign_out'
 end
 
 Given /^I do not exist as a user$/ do
-  @user = { :name => "Testy McUserton", :email => "testy@userton.com",
-    :password => "please", :password_confirmation => "please"}
-  User.find(:first, :conditions => { :email => @user[:email] }).should be_nil
+  User.find(:first, :conditions => { :email => valid_user[:email] }).should be_nil
   visit '/users/sign_out'
 end
 
 When /^I sign in with a wrong password$/ do
   visit '/users/sign_in'
-  fill_in "Email", :with => @user[:email]
+  fill_in "Email", :with => valid_user[:email]
   fill_in "Password", :with => "wrongpass"
   click_button "Sign in"
 end
@@ -173,8 +150,8 @@ end
 
 When /^I sign in with valid credintials$/ do
   visit '/users/sign_in'
-  fill_in "Email", :with => @user[:email]
-  fill_in "Password", :with => @user[:password]
+  fill_in "Email", :with => valid_user[:email]
+  fill_in "Password", :with => valid_user[:password]
   click_button "Sign in"
 end
 
