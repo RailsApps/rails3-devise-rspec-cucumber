@@ -26,7 +26,9 @@ When /^I sign in as "(.*)\/(.*)"$/ do |email, password|
 end
 
 Then /^I should be signed in$/ do
-  page.should have_content "Signed in successfully."
+  page.should have_content "Logout"
+  page.should_not have_content "Sign up"
+  page.should_not have_content "Login"
 end
 
 When /^I return next time$/ do
@@ -142,4 +144,40 @@ end
 
 When /^I return to the site$/ do
   visit '/'
+end
+
+Given /^I exist as a user$/ do
+  @user = { :name => "Testy McUserton", :email => "testy@userton.com",
+    :password => "please", :password_confirmation => "please"}
+  sign_up @user
+  visit '/users/sign_out'
+end
+
+Given /^I do not exist as a user$/ do
+  @user = { :name => "Testy McUserton", :email => "testy@userton.com",
+    :password => "please", :password_confirmation => "please"}
+  User.find(:first, :conditions => { :email => @user[:email] }).should be_nil
+  visit '/users/sign_out'
+end
+
+When /^I sign in with a wrong password$/ do
+  visit '/users/sign_in'
+  fill_in "Email", :with => @user[:email]
+  fill_in "Password", :with => "wrongpass"
+  click_button "Sign in"
+end
+
+Then /^I see an invalid login message$/ do
+  page.should have_content "Invalid email or password."
+end
+
+When /^I sign in with valid credintials$/ do
+  visit '/users/sign_in'
+  fill_in "Email", :with => @user[:email]
+  fill_in "Password", :with => @user[:password]
+  click_button "Sign in"
+end
+
+Then /^I see a successfull sign in message$/ do
+  page.should have_content "Signed in successfully."
 end
