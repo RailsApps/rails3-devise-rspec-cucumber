@@ -158,3 +158,14 @@ end
 Then /^I see a successfull sign in message$/ do
   page.should have_content "Signed in successfully."
 end
+
+When /^I edit my account details$/ do
+  click_link "Edit account"
+  fill_in "Name", :with => "newname"
+  fill_in "Current password", :with => valid_user[:password]
+  click_button "Update"
+end
+
+Then /^I should see an account edited message$/ do
+  page.should have_content "You updated your account successfully."
+end
