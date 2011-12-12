@@ -4,6 +4,6 @@ Feature: Show Users
   so I can know if the site has users
 
     Scenario: Viewing users
-      Given I am a user named "foo" with an email "user@test.com" and password "please"
-      When I go to the homepage
-      Then I should see "User: foo"
+      Given I exist as a user
+      When I look at the list of users
+      Then I should see my name

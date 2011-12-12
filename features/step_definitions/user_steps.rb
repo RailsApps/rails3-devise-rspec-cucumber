@@ -1,7 +1,3 @@
-Given /^no user exists with an email of "(.*)"$/ do |email|
-  User.find(:first, :conditions => { :email => email }).should be_nil
-end
-
 Given /^I am a user named "([^"]*)" with an email "([^"]*)" and password "([^"]*)"$/ do |name, email, password|
   User.new(:name => name,
             :email => email,
@@ -11,14 +7,6 @@ end
 
 Given /^I am not logged in$/ do
   visit '/users/sign_out'
-end
-
-When /^I sign in as "(.*)\/(.*)"$/ do |email, password|
-  visit '/users/sign_out'
-  visit '/users/sign_in'
-  fill_in "Email", :with => email
-  fill_in "Password", :with => password
-  click_button "Sign in"
 end
 
 When /^I go to the homepage$/ do
@@ -43,18 +31,6 @@ end
 
 Then /^I should see "([^"]*)"$/ do |text|
   page.should have_content(text)
-end
-
-When /^I press "([^"]*)"$/ do |label|
-  click_button label
-end
-
-When /^I fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
-  fill_in(field, :with => value)
-end
-
-When /^I follow "([^"]*)"$/ do |text|
-  click_link text
 end
 
 def valid_user
@@ -168,4 +144,12 @@ end
 
 Then /^I should see an account edited message$/ do
   page.should have_content "You updated your account successfully."
+end
+
+When /^I look at the list of users$/ do
+  visit '/'
+end
+
+Then /^I should see my name$/ do
+  page.should have_content valid_user[:name]
 end
