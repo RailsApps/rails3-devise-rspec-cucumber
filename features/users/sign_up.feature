@@ -5,51 +5,24 @@ Feature: Sign up
 
     Background:
       Given I am not logged in
-      And I am on the home page
-      And I go to the sign up page
 
     Scenario: User signs up with valid data
-      And I fill in the following:
-        | Name                  | Testy McUserton |
-        | Email                 | user@test.com   |
-        | Password              | please          |
-        | Password confirmation | please          |
-      And I press "Sign up"
-      Then I should see "Welcome! You have signed up successfully." 
+      When I sign up with valid user data
+      Then I should see a succesfull sign up message
       
     Scenario: User signs up with invalid email
-      And I fill in the following:
-        | Name                  | Testy McUserton |
-        | Email                 | invalidemail    |
-        | Password              | please          |
-        | Password confirmation | please          |
-      And I press "Sign up"
-      Then I should see "Email is invalid"
+      When I sign up with an invalid email
+      Then I should see an invalid email message
 
     Scenario: User signs up without password
-      And I fill in the following:
-        | Name                  | Testy McUserton |
-        | Email                 | user@test.com   |
-        | Password              |                 |
-        | Password confirmation | please          |
-      And I press "Sign up"
-      Then I should see "Password can't be blank"
+      When I sign up without a password
+      Then I should see a missing password message
 
     Scenario: User signs up without password confirmation
-      And I fill in the following:
-        | Name                  | Testy McUserton |
-        | Email                 | user@test.com   |
-        | Password              | please          |
-        | Password confirmation |                 |
-      And I press "Sign up"
-      Then I should see "Password doesn't match confirmation"
+      When I sign up without a confirmed password
+      Then I should see a missing password confirmation message
 
     Scenario: User signs up with mismatched password and confirmation
-      And I fill in the following:
-        | Name                  | Testy McUserton |
-        | Email                 | user@test.com   |
-        | Password              | please          |
-        | Password confirmation | please1         |
-      And I press "Sign up"
-      Then I should see "Password doesn't match confirmation"
+      When I sign up with a mismatched password confirmation
+      Then I should see a mismatched password message
 
