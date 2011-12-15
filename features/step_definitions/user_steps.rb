@@ -77,7 +77,7 @@ When /^I sign in with a wrong password$/ do
   sign_in user
 end
 
-When /^I sign in with valid credintials$/ do
+When /^I sign in with valid credentials$/ do
   sign_in valid_user
 end
 
@@ -133,7 +133,7 @@ Then /^I see an invalid login message$/ do
   page.should have_content "Invalid email or password."
 end
 
-Then /^I see a successfull sign in message$/ do
+Then /^I see a successful sign in message$/ do
   page.should have_content "Signed in successfully."
 end
 
