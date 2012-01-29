@@ -1,6 +1,6 @@
-h1. Rails 3.1 + Devise + RSpec + Cucumber
+h1. Rails 3.2 Devise RSpec Cucumber
 
-This is an example application for Rails 3.1.x that shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. Devise gives you ready-made authentication and user management. RSpec is a popular alternative to the Test::Unit testing framework. Cucumber is often used with RSpec for Behaviour Driven Development.
+This is an example application for Rails 3.2 that shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. Devise gives you ready-made authentication and user management. RSpec is a popular alternative to the Test::Unit testing framework. Cucumber is often used with RSpec for Behaviour Driven Development.
 
 Best of all, there's a "detailed tutorial":https://github.com/RailsApps/rails3-devise-rspec-cucumber/wiki/Tutorial (walk-through) to show how it's built.
 
@@ -8,15 +8,13 @@ You can clone this app or generate a new Rails application using this app as a t
 
 Any issues? Please create a "GitHub issue":http://github.com/RailsApps/rails3-devise-rspec-cucumber/issues.
 
-h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter !http://railsapps.github.com/images/mailing-list-icon.jpg(Join the Mailing List)!:http://eepurl.com/dQx3o Join the Mailing List
+h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter
 
 Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
 
-<a href="http://eepurl.com/dQx3o">Join the email list</a> (low volume, announcements only) for project updates and my tips about Rails resources.
-
 h2. !http://railsapps.github.com/images/rails-36x36.jpg(Tutorial)! Tutorial
 
-A complete walkthrough tutorial for Rails 3.1 is available on the GitHub wiki:
+A complete walkthrough tutorial is available on the GitHub wiki:
 
 h4. "View the Tutorial":https://github.com/RailsApps/rails3-devise-rspec-cucumber/wiki/Tutorial
 
@@ -38,16 +36,10 @@ h2. Dependencies
 
 Before generating your application, you will need:
 
-* The Ruby language (version 1.9.2)
-** @$ ruby -v@
-* Rails 3.1
-** @$ rails -v@
-* Rake 0.9.2
-** @$ rake --version@
+* The Ruby language (version 1.9.3)
+* Rails 3.2
 
-You must update the standard Ruby installation from Rake 0.8.7 to Rake 0.9.2 before using the application templates to generate a new Rails app.
-
-See "Installing Rails 3.1":http://railsapps.github.com/installing-rails-3-1.html and "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for detailed instructions and advice.
+See "Installing Rails 3.2":http://railsapps.github.com/installing-rails.html for detailed instructions and advice.
 
 h2. Getting the Application
 
@@ -67,18 +59,14 @@ You can use an application template to generate a new version of the example app
 
 To build the "rails3-devise-rspec-cucumber" example application, run the command:
 
-@$ rails new myapp -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-devise-rspec-cucumber-template.rb -T@
+@rails new myapp -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-devise-rspec-cucumber-template.rb -T@
 
-Use the @-T@ flag to skip Test::Unit files. Add the @-J@ flag to skip Prototype files for Rails 3.0 (not needed for Rails 3.1).
-
-bq. You MUST be using Rails 3.0.4 or newer. Generating a Rails application from an “HTTPS” URL does not work in Rails 3.0.3 and earlier versions.
+Use the @-T@ flag to skip Test::Unit files.
 
 This creates a new Rails app (with the name @myapp@) on your computer.
 
 The application generator template will ask you for your preferences:
 
-* Would you like to use jQuery?
-* Would you like to use jQuery UI?
 * Would you like to use Haml instead of ERB?
 * Would you like to use RSpec instead of TestUnit?
 * Would you like to use factory_girl for test fixtures with RSpec?
@@ -91,6 +79,12 @@ The application generator template will ask you for your preferences:
 * Completely reset all CSS to eliminate styling?
 * Would you like to set a robots.txt file to ban spiders?
 * Would you like to use ‘rails-footnotes’ during development?
+* Which front-end framework would you like for HTML5 and CSS3?
+## None
+## Zurb Foundation
+## Twitter Bootstrap
+## Skeleton
+## Normalize CSS for consistent styling
 
 h4. Use "Recipes" to Customize an Application Template
 
@@ -113,10 +107,6 @@ The application uses the following gems:
 * "cucumber-rails":http://rubygems.org/gems/cucumber-rails
 * "capybara":http://rubygems.org/gems/capybara
 * "devise":http://rubygems.org/gems/devise
-
-See an example "Rails 3.1.3 Gemfile":http://railsapps.github.com/rails-3-1-3-example-gemfile.html.
-
-See "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for advice and details.
 
 h4. Install the Required Gems
 
@@ -218,6 +208,12 @@ For a Devise introduction, Ryan Bates offers a "Railscast on Devise":http://rail
 h4. Issues
 
 Please create a "GitHub issue":http://github.com/RailsApps/rails3-devise-rspec-cucumber/issues if you identify any problems or have suggestions for improvements.
+
+h4. Where to Get Help
+
+Your best source for help with problems is "Stack Overflow":http://stackoverflow.com/questions/tagged/ruby-on-rails-3. Your issue may have been encountered and addressed by others.
+
+You can also try "Rails Hotline":http://www.railshotline.com/, a free telephone hotline for Rails help staffed by volunteers.
 
 h2. Contributing
 
