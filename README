@@ -4,14 +4,6 @@ Rails3 + Devise + Rspec + Cucumber
 You can use this project as a starting point for a Rails web application. It requires Rails 3 and uses Devise http://github.com/plataformatec/devise for user management and authentication, showing how to add RSpec and Cucumber.
 ________________________
 
-Tutorial
-
-A complete "walkthrough" tutorial is available on the GitHub wiki:
-
-https://github.com/railsapps/rails3-devise-rspec-cucumber/wiki/Tutorial
-
-________________________
-
 See the README file on GitHub
 
 For more information, please see the updated README file on GitHub:
