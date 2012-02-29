@@ -154,7 +154,7 @@ Then /^I see a successful sign in message$/ do
 end
 
 Then /^I should see a successful sign up message$/ do
-  page.should have_content "A message with a confirmation link has been sent to your email address."
+  page.should have_content "Welcome! You have signed up successfully."
 end
 
 Then /^I should see an invalid email message$/ do
