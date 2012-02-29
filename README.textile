@@ -177,7 +177,7 @@ Open a new shell or restart your terminal application to continue.
 
 h4. Configure ActionMailer
 
-The example application is set to deliver email in both development and production. It will raise deliervy errors in development but not production. 
+The example application is set to deliver email in both development and production. It will raise delivery errors in development but not production. 
 
 In development, @config.action_mailer.default_url_options@ is set for a host at @localhost:3000@ which will enable links in Devise confirmation email messages to work properly. You'll need to change the @config.action_mailer.default_url_options@ host option from @example.com@ to your own domain for the production environment.
 
