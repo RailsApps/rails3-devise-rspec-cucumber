@@ -55,7 +55,7 @@ _Fork:_ If you'd like to add features (or bug fixes) to improve the example appl
 
 _Clone:_ If you want to copy and customize the app with changes that are only useful for your own project, you can clone the GitHub repo. You'll need to search-and-replace the project name throughout the application. You probably should generate the app instead (see below).
 
-_Generate:_ If you want to use the project as a starter app for your customized application, use the application template to generate a new version of the example app. You'll be able to give it your project name when you generate the app.
+_Generate:_ If you want to use the project as a starter app for your customized application, use the application template to generate a new version of the example app. You'll be able to give it your own project name when you generate the app. Generating the application (described below) gives you many options, such as using Haml for views, additional Devise modules, and various HTML5/CSS front-end frameworks such as Twitter Bootstrap.
 
 h4. Clone the Repository
 
