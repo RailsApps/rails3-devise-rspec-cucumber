@@ -1,8 +1,10 @@
-h1. Rails Application with Devise and RSpec and Cucumber
+h1. Rails Application for Devise with RSpec and Cucumber
 
 Rails 3.2 example application shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. 
 
-Devise gives you ready-made authentication and user management. RSpec is a popular alternative to the Test::Unit testing framework. Cucumber is often used with RSpec for Behaviour Driven Development.
+* "Devise":http://github.com/plataformatec/devise gives you ready-made authentication and user management. 
+* "RSpec":http://rspec.info/  is a popular alternative to the Test::Unit testing framework. 
+* "Cucumber":http://cukes.info/ is used for Behaviour Driven Development. 
 
 Best of all, there's a "detailed tutorial":http://railsapps.github.com/tutorial-rails-devise-rspec-cucumber.html to show how it's built.
 
@@ -26,13 +28,13 @@ If you simply wish to modify the application for your own project, you can downl
 
 h2. What Is Implemented -- and What Is Not
 
-This is a demonstration application that allows you to visit a home page and see a list of users. With the default user's email and password (supplied below), you can log in and view details for each user. You can customize this app as you need.
+This is a demonstration application that allows you to visit a home page and see a list of users. With the default user's email and password (supplied below), you can log in and view details for each user. Devise provides user management so a visitor can register with an email address and password and create an account. Devise provides authentication so access to the site can be limited to users who are registered and logged in.
 
 h4. Similar Examples and Tutorials
 
-If you'd like to use the Mongoid ORM with the MongoDB datastore instead of ActiveRecord and a SQLite database, see the "rails3-mongoid-devise":https://github.com/RailsApps/rails3-mongoid-devise example app and tutorial. Mongoid makes development quicker without schemas or migrations. The "rails3-mongoid-devise":https://github.com/RailsApps/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
+This example application uses ActiveRecord and a SQLite database. You can use the Mongoid ORM with the MongoDB datastore instead, for faster development without schemas or migrations. The "rails3-mongoid-devise":https://github.com/RailsApps/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
 
-See an expanded list of more "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
+See an expanded list of similar "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
 
 h2. Dependencies
 
@@ -47,7 +49,15 @@ h2. Getting the Application
 
 You have several options for getting the code.
 
-h4. Downloading the Code
+h4. Fork, Clone, or Generate?
+
+_Fork:_ If you'd like to add features (or bug fixes) to improve the example application, you can fork the GitHub repo and "make pull requests":http://help.github.com/send-pull-requests/. Your code contributions are welcome!
+
+_Clone:_ If you want to copy and customize the app with changes that are only useful for your own project, you can clone the GitHub repo. You'll need to search-and-replace the project name throughout the application. You probably should generate the app instead (see below).
+
+_Generate:_ If you want to use the project as a starter app for your customized application, use the application template to generate a new version of the example app. You'll be able to give it your project name when you generate the app.
+
+h4. Clone the Repository
 
 If you simply wish to examine the example code, you can download the code ("clone the repository") with the command
 
@@ -64,39 +74,43 @@ You can use an application template to generate a new version of the example app
 To build the "rails3-devise-rspec-cucumber" example application, run the command:
 
 <pre>
-rails new myapp -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-devise-rspec-cucumber-template.rb -T
+$ rails new myapp -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-devise-rspec-cucumber-template.rb -T
 </pre>
 
 Use the @-T@ flag to skip Test::Unit files.
 
+The @$@ character indicates a shell prompt; don't include it when you run the command.
+
 This creates a new Rails app (with the name @myapp@) on your computer.
 
-The application generator template will ask you for your preferences:
+The application generator templates will ask you for various preferences:
 
-* Would you like to use Haml instead of ERB?
-* Would you like to use RSpec instead of TestUnit?
-* Would you like to use factory_girl for test fixtures with RSpec?
-* Would you like to use Cucumber for your BDD?
-* Would you like to use Guard to automate your workflow?
-* Would you like to use Devise for authentication?
-* Would you like to install HTML5 Boilerplate?
-* Normalize CSS and use Skeleton boilerplate?
-* Normalize CSS for consistent styling across browsers?
-* Completely reset all CSS to eliminate styling?
-* Would you like to set a robots.txt file to ban spiders?
-* Would you like to use ‘rails-footnotes’ during development?
+* Would you like to use "Haml":http://en.wikipedia.org/wiki/Haml instead of ERB?
+* Would you like to use "RSpec":http://rspec.info/ instead of TestUnit?
+* Would you like to use "factory_girl":https://github.com/thoughtbot/factory_girl for test fixtures with RSpec?
+* Would you like to use "machinist":https://github.com/notahat/machinist for test fixtures with RSpec?
+* Would you like to use "Cucumber":http://cukes.info/ for your BDD?
+* Would you like to use "Guard":http://intridea.com/posts/hire-a-guard-for-your-project to automate your workflow?
+* Would you like the app to use a Gmail account to send email?
+* Would you like to use "Devise":http://github.com/plataformatec/devise for authentication?
+## No
+## Devise with default modules
+## Devise with Confirmable module
+## Devise with Confirmable and Invitable modules
 * Which front-end framework would you like for HTML5 and CSS3?
 ## None
-## Zurb Foundation
-## Twitter Bootstrap
-## Skeleton
+## "Zurb Foundation":http://foundation.zurb.com/
+## "Twitter Bootstrap":http://twitter.github.com/bootstrap/
+## "Skeleton":http://www.getskeleton.com/
 ## Normalize CSS for consistent styling
+* Would you like to use "rails-footnotes":https://github.com/josevalim/rails-footnotes during development?
+* Would you like to set a robots.txt file to ban spiders?
 
 h4. Use "Recipes" to Customize an Application Template
 
-The "tutorial":http://railsapps.github.com/tutorial-rails-devise-rspec-cucumber.html shows how a customized application template can be assembled from "recipes." The application template was created using the "Rails Apps Composer":https://github.com/RailsApps/rails_apps_composer gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
+The application template was created using the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages. Use "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer if you want to customize the application template for your own starter apps.
 
-h4. Please Remember: Edit the README
+h4. Edit the README
 
 If you're open sourcing the app on GitHub, please edit the README file to add a description of the app and your contact info. Changing the README is important if you're using a clone of the example app. I've been mistaken (and contacted) as the author of apps that are copied from my example.
 
@@ -114,6 +128,8 @@ The application uses the following gems:
 * "capybara":http://rubygems.org/gems/capybara
 * "devise":http://rubygems.org/gems/devise
 
+See "Example Gemfiles for Rails 3.2":http://railsapps.github.com/rails-3-2-example-gemfile.html.
+
 h4. Install the Required Gems
 
 Install the required gems on your computer:
@@ -126,26 +142,60 @@ You can check which gems are installed on your computer with:
 
 Keep in mind that you have installed these gems locally. When you deploy the app to another server, the same gems (and versions) must be available.
 
-h4. Set Up Configuration for Devise
+h2. Configure Email
 
-This app uses "Devise":http://github.com/plataformatec/devise for user management and authentication.
+You must configure the app for your email account if you want your application to send email messages, for example, if you've generated the application with the option to install the Devise @:confirmable@ module. 
+
+h4. Use a Gmail account
+
+If you've generated the application with the option to use a Gmail account to send email, you'll need to modify the files *config/environments/development.rb* and *config/environments/production.rb* to include your Gmail username and password.
+
+<pre>
+config.action_mailer.smtp_settings = {
+  address: "smtp.gmail.com",
+  port: 587,
+  domain: "example.com",
+  authentication: "plain",
+  enable_starttls_auto: true,
+  user_name: ENV["GMAIL_USERNAME"],
+  password: ENV["GMAIL_PASSWORD"]
+}
+</pre>
+
+You can replace @ENV["GMAIL_USERNAME"]@ and @ENV["GMAIL_PASSWORD"]@ with your Gmail username and password. However, committing the file to a public GitHub repository will expose your secret password.
+
+If you're familiar with setting "Unix environment variables":http://en.wikipedia.org/wiki/Environment_variable, it's advisable to leave @config.action_mailer.smtp_settings@ unchanged and set your environment variables in the file that is read when starting an interactive shell (the *~/.bashrc* file for the bash shell). This will keep the password out of your repository.
+
+Are you using a bash shell? Use @echo $SHELL@ to find out. For a bash shell, edit the *~/.bashrc* file and add:
+
+<pre>
+export GMAIL_USERNAME="myname@gmail.com"
+export GMAIL_PASSWORD="secret*"
+</pre>
+
+Open a new shell or restart your terminal application to continue.
+
+h4. Configure ActionMailer
+
+The example application is set to deliver email in both development and production. It will raise deliervy errors in development but not production. 
+
+In development, @config.action_mailer.default_url_options@ is set for a host at @localhost:3000@ which will enable links in Devise confirmation email messages to work properly. You'll need to change the @config.action_mailer.default_url_options@ host option from @example.com@ to your own domain for the production environment.
+
+You can change these values as needed in the *config/environments/development.rb* and *config/environments/production.rb* files.
+
+h4. Configure Devise for Email
+
+Complete your email configuration by modifying
+
+*config/initializers/devise.rb*
+
+and setting the @config.mailer_sender@ option for the return email address for messages that Devise sends from the application.
+
+h2. Configure Devise
 
 You can modify the configuration file for Devise if you want to use something other than the defaults:
 
 *config/initializers/devise.rb*
-
-h4. Configure Email for Devise
-
-Configure email by modifying
-
-*config/initializers/devise.rb*
-
-and setting the return email address for emails sent from the application.
-
-You may need to set values for your mailhost in
-
-*config/environments/development.rb*
-*config/environments/production.rb*
 
 h2. Create a Default User
 
@@ -161,14 +211,24 @@ puts 'New user created: ' << user.name
 
 Use the defaults or change the values for name, email, and password as you wish.
 
-h4. Seed the Database
+If you've generated the application with the option to install the Devise @:confirmable@ module, there will be an extra attribute @confirmed_at => Time.now@ for creation of a user.
 
-Add the default user to the database by running the command:
+h4. Set the Database
 
-@$ rake db:migrate@
-@$ rake db:seed@
+Prepare the database and add the default user to the database by running the commands:
 
-h4. Test the App
+<pre>
+$ bundle exec rake db:migrate
+$ bundle exec rake db:seed
+</pre>
+
+Set the database for running tests:
+
+<pre>
+$ bundle exec rake db:test:prepare
+</pre>
+
+h2. Test the App
 
 You can check that your app runs properly by entering the command
 
@@ -185,7 +245,7 @@ You should delete or change the pre-configured logins before you deploy your app
 
 h2. Deploy to Heroku
 
-For your convenience, here are instructions for "deploying your app to Heroku":http://railsapps.github.com/rails-heroku-tutorial.html. Heroku provides low cost, easily configured Rails application hosting.
+For your convenience, here is a "Tutorial for Rails on Heroku":http://railsapps.github.com/rails-heroku-tutorial.html. Heroku provides low cost, easily configured Rails application hosting.
 
 h2. Customizing
 
@@ -195,15 +255,15 @@ This application provides no useful functionality apart from demonstrating Devis
 
 h2. Testing
 
-The application contains RSpec unit tests and Cucumber scenarios and steps. The tests are minimal and can be improved.
-
-Please send the author a message, create an issue, or submit a pull request if you can contribute improved RSpec or Cucumber files.
+The example application contains a suite of RSpec unit tests and Cucumber scenarios and step definitions.
 
 After installing the application, run @rake -T@ to check that rake tasks for RSpec and Cucumber are available.
 
 Run @rake spec@ to run all RSpec tests.
 
-Run @rake cucumber@ (or more simply, @cucumber@) to run all Cucumber scenarios and steps.
+Run @rake cucumber@ (or more simply, @cucumber@) to run all Cucumber scenarios.
+
+Please send the author a message, create an issue, or submit a pull request if you can contribute improved RSpec or Cucumber files.
 
 h2. Documentation and Support
 
@@ -235,10 +295,6 @@ Daniel Kehoe ("http://danielkehoe.com/":http://danielkehoe.com/) implemented the
 
 Is the app useful to you? Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps
 and tweet some praise. I'd love to know you were helped out by what I've put together.
-
-h4. Contributors
-
-"Rowan":https://github.com/rowanu implemented Cucumber steps.
 
 h2. License
 
