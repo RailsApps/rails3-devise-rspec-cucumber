@@ -4,6 +4,7 @@ FactoryGirl.define do
     email 'example@example.com'
     password 'please'
     password_confirmation 'please'
-    confirmed_at Time.now unless Devise::Models::Confirmable.nil?
+    # required if the Devise Confirmable module is used
+    # confirmed_at Time.now
   end
 end
