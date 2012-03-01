@@ -1,5 +1,5 @@
-Rails3DeviseRspecCucumber::Application.routes.draw do
-  #get \"users\/show\"
+Myapp::Application.routes.draw do
+  
 
   root :to => "home#index"
 
