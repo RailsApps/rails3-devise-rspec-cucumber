@@ -1,5 +1,4 @@
-Myapp::Application.routes.draw do
-  
+Rails3DeviseRspecCucumber::Application.routes.draw do
 
   root :to => "home#index"
 
