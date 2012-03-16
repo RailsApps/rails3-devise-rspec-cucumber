@@ -11,14 +11,10 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-  <body class="<%= params[:controller] %>">
+  <body>
     <div id="container" class="container">
       <header>
-        <nav>
-          <ul class="hmenu">
-            <%= render 'shared/navigation' %>
-          </ul>
-        </nav>
+        <%= render 'layouts/navigation' %>
         <%- flash.each do |name, msg| -%>
           <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
         <%- end -%>
