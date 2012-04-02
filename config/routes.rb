@@ -1,4 +1,4 @@
-Myapp::Application.routes.draw do
+Rails3DeviseRspecCucumber::Application.routes.draw do
   authenticated :user do
     root :to => 'home#index'
   end
