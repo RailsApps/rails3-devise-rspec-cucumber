@@ -83,28 +83,39 @@ The @$@ character indicates a shell prompt; don't include it when you run the co
 
 This creates a new Rails app (with the name @myapp@) on your computer.
 
-The application generator templates will ask you for various preferences:
+The application generator templates will ask you for various preferences.
 
-* Would you like to use "Haml":http://en.wikipedia.org/wiki/Haml instead of ERB?
-* Would you like to use "RSpec":http://rspec.info/ instead of TestUnit?
-* Would you like to use "factory_girl":https://github.com/thoughtbot/factory_girl for test fixtures with RSpec?
-* Would you like to use "machinist":https://github.com/notahat/machinist for test fixtures with RSpec?
-* Would you like to use "Cucumber":http://cukes.info/ for your BDD?
-* Would you like to use "Guard":http://intridea.com/posts/hire-a-guard-for-your-project to automate your workflow?
-* Would you like the app to use a Gmail account to send email?
+To reproduce the example application exactly as found in the repository, make the following selections:
+
+* Would you like to use "Haml":http://en.wikipedia.org/wiki/Haml instead of ERB? *no*
+* Would you like to use "RSpec":http://rspec.info/ instead of TestUnit? *yes*
+* Would you like to use "factory_girl":https://github.com/thoughtbot/factory_girl for test fixtures with RSpec? *yes*
+* Would you like to use "machinist":https://github.com/notahat/machinist for test fixtures with RSpec? *no*
+* Would you like to use "Cucumber":http://cukes.info/ for your BDD? *yes*
+* Would you like to use "Guard":http://intridea.com/posts/hire-a-guard-for-your-project to automate your workflow? *no*
+* Would you like the app to use a Gmail account to send email? *yes*
 * Would you like to use "Devise":http://github.com/plataformatec/devise for authentication?
 ## No
-## Devise with default modules
+## Devise with default modules *#2*
 ## Devise with Confirmable module
 ## Devise with Confirmable and Invitable modules
+* Would you like to manage authorization with CanCan & Rolify? *no*
 * Which front-end framework would you like for HTML5 and CSS3?
-## None
+## None *#1*
 ## "Zurb Foundation":http://foundation.zurb.com/
-## "Twitter Bootstrap":http://twitter.github.com/bootstrap/
+## "Twitter Bootstrap":http://twitter.github.com/bootstrap/ (less)
+## "Twitter Bootstrap":http://twitter.github.com/bootstrap/ (sass)
 ## "Skeleton":http://www.getskeleton.com/
 ## Normalize CSS for consistent styling
-* Would you like to use "rails-footnotes":https://github.com/josevalim/rails-footnotes during development?
-* Would you like to set a robots.txt file to ban spiders?
+* Which form gem would you like?
+## None *#1*
+## simple form
+## simple form (bootstrap)
+* Would you like to use "rails-footnotes":https://github.com/josevalim/rails-footnotes during development? *no*
+* Would you like to set a robots.txt file to ban spiders? *yes*
+* Would you like to add 'will_paginate' for pagination? *no*
+
+You can choose other selections if you don't care about matching the example application exactly.
 
 h4. Use "Recipes" to Customize an Application Template
 
