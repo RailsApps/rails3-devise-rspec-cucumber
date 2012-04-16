@@ -276,6 +276,14 @@ Run @rake cucumber@ (or more simply, @cucumber@) to run all Cucumber scenarios.
 
 Please send the author a message, create an issue, or submit a pull request if you can contribute improved RSpec or Cucumber files.
 
+h2. Troubleshooting
+
+Problems? Check the "issues":https://github.com/RailsApps/rails3-application-templates/issues.
+
+h4. Problems with  "Certificate Verify Failed"
+
+Are you getting an error "OpenSSL certificate verify failed" when you try to generate a new Rails app from an application template? See suggestions to resolve the error "Certificate Verify Failed":http://railsapps.github.com/openssl-certificate-verify-failed.html.
+
 h2. Documentation and Support
 
 This is the only documentation.
