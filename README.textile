@@ -34,6 +34,10 @@ h4. Similar Examples and Tutorials
 
 This example application uses ActiveRecord and a SQLite database. You can use the Mongoid ORM with the MongoDB datastore instead, for faster development without schemas or migrations. The "rails3-mongoid-devise":https://github.com/RailsApps/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
 
+For an extended version of this example that adds "CanCan":https://github.com/ryanb/cancan for authorization (controlling access to administrative pages) and "Twitter Bootstrap":http://twitter.github.com/bootstrap/ (for CSS styling) see the "rails3-bootstrap-devise-cancan":https://github.com/RailsApps/rails3-bootstrap-devise-cancan example application.
+
+The "rails-prelaunch-signup":https://github.com/RailsApps/rails-prelaunch-signup example and tutorial from the RailsApps project is also based on this example application.
+
 See an expanded list of similar "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
 
 h2. Dependencies
