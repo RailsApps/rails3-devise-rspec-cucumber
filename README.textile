@@ -1,4 +1,4 @@
-h1. Rails Application for Devise with RSpec and Cucumber
+h1. !http://railsapps.github.com/images/rails-36x36.jpg(Rails Application for Devise with RSpec and Cucumber)! Rails App for Devise with RSpec and Cucumber
 
 Rails 3.2 example application shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. 
 
@@ -8,15 +8,13 @@ Rails 3.2 example application shows how to use "Devise":http://github.com/plataf
 
 Best of all, there's a "detailed tutorial":http://railsapps.github.com/tutorial-rails-devise-rspec-cucumber.html to show how it's built.
 
-You can clone this app or generate a new Rails application using this app as a template.
-
-Any issues? Please create a "GitHub issue":http://github.com/RailsApps/rails3-devise-rspec-cucumber/issues.
+You can clone this app or generate a new Rails application using an "application template":https://github.com/RailsApps/rails3-application-templates.
 
 h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter
 
 Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
 
-h2. !http://railsapps.github.com/images/rails-36x36.jpg(Tutorial)! Tutorial
+h2. Tutorial
 
 A complete walkthrough tutorial is available on the GitHub wiki:
 
@@ -32,13 +30,13 @@ This is a demonstration application that allows you to visit a home page and see
 
 h4. Similar Examples and Tutorials
 
+This is one in a series of Rails example apps and tutorials from the "RailsApps Project":http://railsapps.github.com/. See a list of additional "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
+
 This example application uses ActiveRecord and a SQLite database. You can use the Mongoid ORM with the MongoDB datastore instead, for faster development without schemas or migrations. The "rails3-mongoid-devise":https://github.com/RailsApps/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
 
 For an extended version of this example that adds "CanCan":https://github.com/ryanb/cancan for authorization (controlling access to administrative pages) and "Twitter Bootstrap":http://twitter.github.com/bootstrap/ (for CSS styling) see the "rails3-bootstrap-devise-cancan":https://github.com/RailsApps/rails3-bootstrap-devise-cancan example application.
 
 The "rails-prelaunch-signup":https://github.com/RailsApps/rails-prelaunch-signup example and tutorial from the RailsApps project is also based on this example application.
-
-See an expanded list of similar "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
 
 h2. Dependencies
 
@@ -118,6 +116,7 @@ To reproduce the example application exactly as found in the repository, make th
 * Would you like to use "rails-footnotes":https://github.com/josevalim/rails-footnotes during development? *no*
 * Would you like to set a robots.txt file to ban spiders? *yes*
 * Would you like to add 'will_paginate' for pagination? *no*
+* Add 'therubyracer' JavaScript runtime (for Linux users without node.js)? *no*
 
 You can choose other selections if you don't care about matching the example application exactly.
 
@@ -222,6 +221,8 @@ You'll want to set up a default user so you can easily log in to test the app. Y
 puts 'SETTING UP DEFAULT USER LOGIN'
 user = User.create! :name => 'First User', :email => 'user@example.com', :password => 'please', :password_confirmation => 'please'
 puts 'New user created: ' << user.name
+user2 = User.create! :name => 'Second User', :email => 'user2@example.com', :password => 'please', :password_confirmation => 'please'
+puts 'New user created: ' << user2.name
 </pre>
 
 Use the defaults or change the values for name, email, and password as you wish.
