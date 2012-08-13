@@ -6,7 +6,7 @@ def create_visitor
 end
 
 def find_user
-  @user ||= User.first conditions: {:email => @visitor[:email]}
+  @user ||= User.where(:email => @visitor[:email]).first
 end
 
 def create_unconfirmed_user
@@ -23,7 +23,7 @@ def create_user
 end
 
 def delete_user
-  @user ||= User.first conditions: {:email => @visitor[:email]}
+  @user ||= User.where(:email => @visitor[:email]).first
   @user.destroy unless @user.nil?
 end
 
