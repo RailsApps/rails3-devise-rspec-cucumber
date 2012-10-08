@@ -19,7 +19,7 @@ end
 def create_user
   create_visitor
   delete_user
-  @user = FactoryGirl.create(:user, email: @visitor[:email])
+  @user = Fabricate(:user, email: @visitor[:email])
 end
 
 def delete_user
