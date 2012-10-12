@@ -111,60 +111,9 @@ I recommend using "rvm":https://rvm.io/, the Ruby Version Manager, to create a p
 
 h3. Configure Email
 
-You must configure the app for your email account if you want your application to send email messages. 
+This example application doesn't send email messages. However, if you want your application to send email messages (for example, if you plan to install the Devise @:confirmable@ module) you must configure the application for your email account. See the article "Send Email with Rails":http://railsapps.github.com/rails-send-email.html.
 
-h4. Use a Gmail account
-
-You'll need to modify two files to include your Gmail username and password:
-
-* *config/environments/development.rb*
-* *config/environments/production.rb*
-
-<pre>
-config.action_mailer.smtp_settings = {
-  address: "smtp.gmail.com",
-  port: 587,
-  domain: "example.com",
-  authentication: "plain",
-  enable_starttls_auto: true,
-  user_name: ENV["GMAIL_USERNAME"],
-  password: ENV["GMAIL_PASSWORD"]
-}
-</pre>
-
-You can replace @ENV["GMAIL_USERNAME"]@ and @ENV["GMAIL_PASSWORD"]@ with your Gmail username and password. However, committing the file to a public GitHub repository will expose your secret password.
-
-If you're familiar with setting "Unix environment variables":http://en.wikipedia.org/wiki/Environment_variable, it's advisable to leave @config.action_mailer.smtp_settings@ unchanged and set your environment variables in the file that is read when starting an interactive shell (the *~/.bashrc* file for the bash shell). This will keep the password out of your repository.
-
-Are you using a bash shell? Use @echo $SHELL@ to find out. For a bash shell, edit the *~/.bashrc* file and add:
-
-<pre>
-export GMAIL_USERNAME="myname@gmail.com"
-export GMAIL_PASSWORD="secret*"
-</pre>
-
-Open a new shell or restart your terminal application to continue.
-
-h4. Configure ActionMailer
-
-The example application is set to deliver email in production only. It will raise delivery errors in development but not production. 
-
-In development, @config.action_mailer.default_url_options@ is set for a host at @localhost:3000@ which will enable links in Devise confirmation email messages to work properly. You'll need to change the @config.action_mailer.default_url_options@ host option from @example.com@ to your own domain for the production environment.
-
-You can change these values as needed in these two files:
-
-* *config/environments/development.rb*
-* *config/environments/production.rb*
-
-h4. Configure Devise for Email
-
-Complete your email configuration by modifying
-
-* *config/initializers/devise.rb*
-
-and setting the @config.mailer_sender@ option for the return email address for messages that Devise sends from the application.
-
-h2. Configure Devise
+h3. Configure Devise
 
 You can modify the configuration file for Devise if you want to use something other than the defaults:
 
