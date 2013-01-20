@@ -26,8 +26,6 @@ h2. What Is Implemented -- and What Is Not
 
 This is a demonstration application that allows you to visit a home page and see a list of users. With the default user's email and password (supplied below), you can log in and view details for each user. Devise provides user management so a visitor can register with an email address and password and create an account. Devise provides authentication so access to the site can be limited to users who are registered and logged in.
 
-The @rake db:seed@ command sets up a database with two example users. The first user is designated as an administrator and can view a administrative page when logged in. The second user is restricted from accessing the administrative page.
-
 h4. Similar Examples and Tutorials
 
 This is one in a series of Rails example apps and tutorials from the "RailsApps Project":http://railsapps.github.com/. See a list of additional "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
@@ -72,27 +70,28 @@ If you want to use the project as a starter app, use the "Rails Composer":http:/
 To build the example application, run the command:
 
 <pre>
-$ rails new myapp -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
+$ rails new rails3-devise-rspec-cucumber -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
 </pre>
 
 Use the @-T@ flag to skip Test::Unit files.
 
 The @$@ character indicates a shell prompt; don't include it when you run the command.
 
-This creates a new Rails app (with the name "myapp") on your computer. You can use a different name if you wish.
+This creates a new Rails app named @rails3-devise-rspec-cucumber@ on your computer. You can use a different name if you wish.
 
 You'll see a prompt:
 
 <pre>
 question  Install an example application?
-      1)  I want to build my own application
-      2)  rails3-bootstrap-devise-cancan
-      3)  rails3-devise-rspec-cucumber
-      4)  rails3-mongoid-devise
-      5)  rails3-mongoid-omniauth
-      6)  rails3-subdomains
+          1)  I want to build my own application
+          2)  membership/subscription/saas
+          3)  rails-prelaunch-signup
+          4)  rails3-bootstrap-devise-cancan
+          5)  rails3-devise-rspec-cucumber
+          6)  rails3-mongoid-devise
+          7)  rails3-mongoid-omniauth
+          8)  rails3-subdomains
 </pre>
-
 Choose *rails3-devise-rspec-cucumber*. The Rails Composer tool may give you other options (other choices may have been added since these notes were written).
 
 The application generator template will ask you for additional preferences:
@@ -189,22 +188,59 @@ You can modify the configuration file for Devise if you want to use something ot
 
 * *config/initializers/devise.rb*
 
-h2. Create a Default User
+h3. Configuration File
+
+The application uses the "figaro gem":https://github.com/laserlemon/figaro to set environment variables. Credentials for your administrator account and email account are set in the *config/application.yml* file. The *.gitignore* file prevents the *config/application.yml* file from being saved in the git repository so your credentials are kept private. See the article "Rails Environment Variables":http://railsapps.github.com/rails-environment-variables.html for more information.
+
+Modify the file *config/application.yml*:
+
+<pre>
+# Add account credentials and API keys here.
+# See http://railsapps.github.com/rails-environment-variables.html
+# This file should be listed in .gitignore to keep your settings secret!
+# Each entry sets a local environment variable and overrides ENV variables in the Unix shell.
+# For example, setting:
+# GMAIL_USERNAME: Your_Gmail_Username
+# makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
+# Add application configuration variables here, as shown below.
+#
+GMAIL_USERNAME: Your_Username
+GMAIL_PASSWORD: Your_Password
+ADMIN_NAME: First User
+ADMIN_EMAIL: user@example.com
+ADMIN_PASSWORD: changeme
+</pre>
+
+If you are planning to customize the application to send email using a Gmail acocunt, you can add the user name and password needed for the application to send email. See the article "Send Email with Rails":http://railsapps.github.com/rails-send-email.html.
+
+If you wish, set your name, email address, and password for the first user's account. If you prefer, you can use the default to sign in to the application and edit the account after deployment. It is always a good idea to change the password after the application is deployed.
+
+All configuration values in the *config/application.yml* file are available anywhere in the application as environment variables. For example, @ENV["GMAIL_USERNAME"]@ will return the string "Your_Username".
+
+If you prefer, you can delete the *config/application.yml* file and set each value as an environment variable in the Unix shell.
 
 h3. Set Up a Database Seed File
 
-You'll want to set up a default user so you can easily log in to test the app. You can modify the file *db/seeds.rb* for your own name, email and password:
+The *db/seeds.rb* file initializes the database with default values. To keep some data private, and consolidate configuration settings in a single location, we use the *config/application.yml* file to set environment variables and then use the environment variables in the *db/seeds.rb* file.
 
 <pre>
-puts 'SETTING UP DEFAULT USER LOGIN'
-user = User.create! :name => 'First User', :email => 'user@example.com', :password => 'please', :password_confirmation => 'please'
-puts 'New user created: ' << user.name
-user2 = User.create! :name => 'Second User', :email => 'user2@example.com', :password => 'please', :password_confirmation => 'please'
-puts 'New user created: ' << user2.name
-user.add_role :admin
+puts 'DEFAULT USERS'
+user = User.find_or_create_by_email :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
+puts 'user: ' << user.name
 </pre>
 
-Use the defaults or change the values for name, email, and password as you wish.
+You can change the first user's name, email, and password in this file but it is better to make the changes in the *config/application.yml* file to keep the credentials private. If you decide to include your private password in the *db/seeds.rb* file, be sure to add the filename to your *.gitignore* file so that your password doesn't become available in your public GitHub repository.
+
+Note that it's not necessary to personalize the *db/seeds.rb* file before you deploy your app. You can deploy the app with an example user and then use the application's "Edit Account" feature to change name, email address, and password after you log in. Use this feature to log in as the first user and change the user name and password to your own.
+
+You may wish to include additional sample users:
+
+<pre>
+user2 = User.find_or_create_by_email :name => 'Second User', :email => 'user2@example.com', :password => 'changeme', :password_confirmation => 'changeme'
+puts 'user: ' << user2.name
+</pre>
+
+This will add a second user to the database.
 
 h3. Set the Database
 
@@ -215,6 +251,8 @@ $ rake db:migrate
 $ rake db:seed
 </pre>
 
+Use @rake db:reset@ if you want to empty and reseed the database.
+
 Set the database for running tests:
 
 <pre>
@@ -222,6 +260,24 @@ $ rake db:test:prepare
 </pre>
 
 If you’re not using "rvm":https://rvm.io/, the Ruby Version Manager, you should preface each rake command with @bundle exec@. You don’t need to use @bundle exec@ if you are using rvm version 1.11.0 or newer.
+
+h3. Change your Application's Secret Token
+
+If you've used the Rails Composer tool to generate the application, the application's secret token will be unique, just as with any Rails application generated with the @rails new@ command.
+
+However, if you've cloned the application directly from GitHub, it is crucial that you change the application's secret token before deploying your application in production mode. Otherwise, people could change their session information, and potentially access your SaaS or membership site as a premium user or administrator. Your secret token should be at least 30 characters long and completely random.
+
+Get a unique secret token:
+
+<pre>
+rake secret
+</pre>
+
+Edit your *config/initializers/secret_token.rb* file to add the secret token:
+
+<pre>
+Rails3BootstrapDeviseCancan::Application.config.secret_token = '...some really long, random string...'
+</pre>
 
 h2. Test the App
 
