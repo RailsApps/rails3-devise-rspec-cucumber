@@ -1,10 +1,10 @@
 h1. !http://railsapps.github.com/images/rails-36x36.jpg(Rails Application for Devise with RSpec and Cucumber)! Rails App for Devise with RSpec and Cucumber
 
-Rails 3.2 example application shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/. 
+Rails 3.2 example application shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/.
 
-* "Devise":http://github.com/plataformatec/devise gives you ready-made authentication and user management. 
-* "RSpec":http://rspec.info/  is a popular alternative to the Test::Unit testing framework. 
-* "Cucumber":http://cukes.info/ is used for Behaviour Driven Development. 
+* "Devise":http://github.com/plataformatec/devise gives you ready-made authentication and user management.
+* "RSpec":http://rspec.info/  is a popular alternative to the Test::Unit testing framework.
+* "Cucumber":http://cukes.info/ is used for Behaviour Driven Development.
 
 Best of all, there's a "detailed tutorial":http://railsapps.github.com/tutorial-rails-devise-rspec-cucumber.html to show how it's built.
 
@@ -62,7 +62,7 @@ If you want to copy and customize the app with changes that are only useful for 
 <pre>
 $ git clone git://github.com/RailsApps/rails3-devise-rspec-cucumber.git
 </pre>
-  
+
 You'll need "git":http://git-scm.com/ on your machine. See "Rails and Git":http://railsapps.github.com/rails-git.html.
 
 h3. Generate
@@ -95,7 +95,7 @@ question  Install an example application?
 
 Choose *rails3-devise-rspec-cucumber*. The Rails Composer tool may give you other options (other choices may have been added since these notes were written).
 
-The application generator template will ask you for additional preferences: 
+The application generator template will ask you for additional preferences:
 
 <pre>
  question  Web server for development?
@@ -143,7 +143,7 @@ If you get an error like this:
 Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
     composer  Running 'after bundler' callbacks.
 The template [...] could not be loaded.
-Error: You have already activated ..., but your Gemfile requires .... 
+Error: You have already activated ..., but your Gemfile requires ....
 Using bundle exec may solve this.
 </pre>
 
@@ -234,7 +234,7 @@ To see your application in action, open a browser window and navigate to "http:/
 To sign in as the default user, (unless you've changed it) use
 
 * email: user@example.com
-* password: please
+* password: changeme
 
 You should delete or change the pre-configured logins before you deploy your application.
 
