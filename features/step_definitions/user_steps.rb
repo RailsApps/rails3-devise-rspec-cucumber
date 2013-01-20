@@ -19,7 +19,9 @@ end
 def create_user
   create_visitor
   delete_user
-  @user = FactoryGirl.create(:user, email: @visitor[:email])
+  @user = FactoryGirl.create(:user, email: @visitor[:email], 
+                						 password: @visitor[:password], 
+              							 password_confirmation: @visitor[:password_confirmation])
 end
 
 def delete_user
