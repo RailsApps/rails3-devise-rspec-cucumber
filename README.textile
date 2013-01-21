@@ -212,7 +212,7 @@ ADMIN_EMAIL: user@example.com
 ADMIN_PASSWORD: changeme
 </pre>
 
-If you are planning to customize the application to send email using a Gmail acocunt, you can add the user name and password needed for the application to send email. See the article "Send Email with Rails":http://railsapps.github.com/rails-send-email.html.
+If you are planning to customize the application to send email using a Gmail account, you can add the user name and password needed for the application to send email. See the article "Send Email with Rails":http://railsapps.github.com/rails-send-email.html.
 
 If you wish, set your name, email address, and password for the first user's account. If you prefer, you can use the default to sign in to the application and edit the account after deployment. It is always a good idea to change the password after the application is deployed.
 
