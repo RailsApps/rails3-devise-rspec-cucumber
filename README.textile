@@ -149,7 +149,7 @@ Using bundle exec may solve this.
 
 It's due to conflicting gem versions. See the article "Rails Error: “You have already activated (…)”":http://railsapps.github.com/rails-error-you-have-already-activated.html.
 
-Other problems? Check the "issues":https://github.com/RailsApps/rails3-application-templates/issues.
+Other problems? Check the "issues":https://github.com/RailsApps/rails3-devise-rspec-cucumber/issues.
 
 h3. Edit the README
 
