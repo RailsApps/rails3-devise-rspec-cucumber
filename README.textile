@@ -4,23 +4,16 @@ Rails 3.2 example application shows how to use "Devise":http://github.com/plataf
 
 * "Devise":http://github.com/plataformatec/devise gives you ready-made authentication and user management.
 * "RSpec":http://rspec.info/  is a popular alternative to the Test::Unit testing framework.
-* "Cucumber":http://cukes.info/ is used for Behaviour Driven Development.
 
-Best of all, there's a "detailed tutorial":http://railsapps.github.io/tutorial-rails-devise-rspec-cucumber.html to show how it's built.
+For a Rails 4.1 example application for Devise with RSpec, see:
 
-You can build this application in only a few minutes using the "Rails Composer":http://railsapps.github.io/rails-composer/ tool.
+* "Devise and Rails":https://github.com/RailsApps/rails-devise uses Devise for authentication
 
-h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter
+h2. Tutorials
 
-Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
+Tutorials are available for Devise and RSpec:
 
-h2. Tutorial
-
-A complete tutorial is available:
-
-h4. "View the Tutorial":http://railsapps.github.io/tutorial-rails-devise-rspec-cucumber.html
-
-The tutorial documents each step to follow to create the application. Every step is documented concisely, so a complete beginner can create this application without any additional knowledge. However, no explanation is offered for any of the steps, so if you are a beginner, you’re advised to look for an introduction to Rails elsewhere. See a list of recommended resources for "Rails":http://railsapps.github.io/rails.html.
+h4. "Tutorials":http://railsapps.github.io/tutorial-rails-devise-rspec-cucumber.html
 
 h2. What Is Implemented -- and What Is Not
 
@@ -28,13 +21,13 @@ This is a demonstration application that allows you to visit a home page and see
 
 h4. Similar Examples and Tutorials
 
-This is one in a series of Rails example apps and tutorials from the "RailsApps Project":http://railsapps.github.io/. See a list of additional "Rails examples, tutorials, and starter apps":http://railsapps.github.io/rails-examples-tutorials.html.
+This is one in a series of Rails example apps and tutorials from the "RailsApps Project":http://railsapps.github.io/. See a list of additional "Rails examples, tutorials, and starter apps":http://railsapps.github.io/rails-examples-tutorials.html. Related example applications may be useful:
 
-This example application uses ActiveRecord and a SQLite database. You can use the Mongoid ORM with the MongoDB datastore instead, for faster development without schemas or migrations. The "rails3-mongoid-devise":https://github.com/RailsApps/rails3-mongoid-devise example app and tutorial shows how to set up Devise and Mongoid with RSpec and Cucumber.
-
-For an extended version of this example that adds "CanCan":https://github.com/ryanb/cancan for authorization (controlling access to administrative pages) and "Twitter Bootstrap":http://twitter.github.com/bootstrap/ (for CSS styling) see the "rails3-bootstrap-devise-cancan":https://github.com/RailsApps/rails3-bootstrap-devise-cancan example application.
-
-The "rails-prelaunch-signup":https://github.com/RailsApps/rails-prelaunch-signup example and tutorial from the RailsApps project is also based on this example application.
+* "Learn Rails":https://github.com/RailsApps/learn-rails companion to the book "Learn Ruby on Rails":http://learn-rails.com/learn-ruby-on-rails.html
+* "Foundation and Rails":http://railsapps.github.io/rails-foundation/ shows how to integrate Foundation
+* "Bootstrap and Rails":http://railsapps.github.io/rails-bootstrap/ shows to integrate Bootstrap
+* "OmniAuth and Rails":https://github.com/RailsApps/rails-omniauth uses OmniAuth for authentication
+* "Devise and Rails":https://github.com/RailsApps/rails-devise uses Devise for authentication
 
 h2. Dependencies
 
