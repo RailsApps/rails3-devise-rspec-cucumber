@@ -6,7 +6,7 @@ For a Rails 4.1 example application for Devise with RSpec, see:
 
 Tutorials are available for Devise and RSpec:
 
-h4. "Tutorials":http://railsapps.github.io/tutorial-rails-devise-rspec-cucumber.html
+* "Devise RSpec Tutorial":http://railsapps.github.io/tutorial-rails-devise-rspec-cucumber.html
 
 h4. Similar Examples and Tutorials
 
