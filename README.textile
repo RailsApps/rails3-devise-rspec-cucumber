@@ -2,7 +2,7 @@ h1. !http://railsapps.github.io/images/rails-36x36.jpg(Rails Application for Dev
 
 For a Rails 4.1 example application for Devise with RSpec, see:
 
-* "Devise and Rails":https://github.com/RailsApps/rails-devise uses Devise for authentication
+* "rails-devise":https://github.com/RailsApps/rails-devise
 
 Tutorials are available for Devise and RSpec:
 
@@ -24,6 +24,8 @@ This repo contains a Rails 3.2 example application integrating "Devise":http://g
 
 * "Devise":http://github.com/plataformatec/devise gives you ready-made authentication and user management.
 * "RSpec":http://rspec.info/  is a popular alternative to the Test::Unit testing framework.
+
+You really should use the "rails-devise":https://github.com/RailsApps/rails-devise newer version.
 
 h2. What Is Implemented -- and What Is Not
 
