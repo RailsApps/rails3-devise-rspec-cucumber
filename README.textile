@@ -1,23 +1,12 @@
-h1. !http://railsapps.github.io/images/rails-36x36.jpg(Rails Application for Devise with RSpec and Cucumber)! Rails App for Devise with RSpec and Cucumber
-
-Rails 3.2 example application shows how to use "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/.
-
-* "Devise":http://github.com/plataformatec/devise gives you ready-made authentication and user management.
-* "RSpec":http://rspec.info/  is a popular alternative to the Test::Unit testing framework.
+h1. !http://railsapps.github.io/images/rails-36x36.jpg(Rails Application for Devise with RSpec and Cucumber)! Rails 4.1
 
 For a Rails 4.1 example application for Devise with RSpec, see:
 
 * "Devise and Rails":https://github.com/RailsApps/rails-devise uses Devise for authentication
 
-h2. Tutorials
-
 Tutorials are available for Devise and RSpec:
 
 h4. "Tutorials":http://railsapps.github.io/tutorial-rails-devise-rspec-cucumber.html
-
-h2. What Is Implemented -- and What Is Not
-
-This is a demonstration application that allows you to visit a home page and see a list of users. With the default user's email and password (supplied below), you can log in and view details for each user. Devise provides user management so a visitor can register with an email address and password and create an account. Devise provides authentication so access to the site can be limited to users who are registered and logged in.
 
 h4. Similar Examples and Tutorials
 
@@ -28,6 +17,17 @@ This is one in a series of Rails example apps and tutorials from the "RailsApps 
 * "Bootstrap and Rails":http://railsapps.github.io/rails-bootstrap/ shows to integrate Bootstrap
 * "OmniAuth and Rails":https://github.com/RailsApps/rails-omniauth uses OmniAuth for authentication
 * "Devise and Rails":https://github.com/RailsApps/rails-devise uses Devise for authentication
+
+h1. !http://railsapps.github.io/images/rails-36x36.jpg(Rails Application for Devise with RSpec and Cucumber)! Rails 3.2
+
+This repo contains a Rails 3.2 example application integrating "Devise":http://github.com/plataformatec/devise with "RSpec":http://rspec.info/ and "Cucumber":http://cukes.info/.
+
+* "Devise":http://github.com/plataformatec/devise gives you ready-made authentication and user management.
+* "RSpec":http://rspec.info/  is a popular alternative to the Test::Unit testing framework.
+
+h2. What Is Implemented -- and What Is Not
+
+This is a demonstration application that allows you to visit a home page and see a list of users. With the default user's email and password (supplied below), you can log in and view details for each user. Devise provides user management so a visitor can register with an email address and password and create an account. Devise provides authentication so access to the site can be limited to users who are registered and logged in.
 
 h2. Dependencies
 
@@ -63,7 +63,7 @@ If you want to use the project as a starter app, use the "Rails Composer":http:/
 To build the example application, run the command:
 
 <pre>
-$ rails new rails3-devise-rspec-cucumber -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
+$ rails new rails3-devise-rspec-cucumber -m https://raw.github.com/RailsApps/rails-composer/master/composer-Rails3_2.rb -T
 </pre>
 
 Use the @-T@ flag to skip Test::Unit files.
